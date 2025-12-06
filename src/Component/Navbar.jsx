@@ -1,32 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react"; // Using lucide-react (a popular React Icons library) for clarity
 import logo from "../assets/download.png";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle function for the mobile menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Define Nav links as an array for cleaner iteration
+  const navLinks = [
+    { name: "ফিচারসমূহ", href: "#features" },
+    { name: "চর্চা সাফল্য", href: "#success" },
+    { name: "সাবস্ক্রিপশন", href: "#subscription" },
+  ];
+
   return (
-    <div className="bg-gray-900 py-4 px-60 text-sm text-white">
-      <div className="flex justify-between items-center">
-        
-        {/* Logo */}
-        <img 
-          src={logo} 
-          alt="logo" 
-          className="w-16 h-16 rounded-xl object-cover"
-        />
+    <nav className="bg-gray-900 text-white text-sm sticky top-0 z-50 shadow-lg">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div className="flex justify-between items-center">
+          
+          {/* 1. Logo */}
+          <a href="/" className="flex items-center space-x-2">
+            <img 
+              src={logo} 
+              alt="logo" 
+              className="w-12 h-12 rounded-xl object-cover" // Reduced size slightly for better Navbar fit
+            />
+          </a>
 
-        {/* Menu */}
-        <div className="hidden md:flex gap-6">
-          <p>ফিচারসমূহ</p>
-          <p>চর্চা সাফল্য</p>
-          <p>সাবস্ক্রিপশন</p>
+          {/* 2. Desktop Menu Links */}
+          <div className="hidden md:flex items-center gap-8 lg:gap-10">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                className="hover:text-green-400 transition-colors cursor-pointer"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          {/* 3. Desktop Button & Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Button */}
+            <button className="bg-green-600 hover:bg-green-700 py-2 px-4 rounded transition-colors text-white font-medium whitespace-nowrap">
+              সাইন আপ করো
+            </button>
+            
+            {/* Mobile Menu Icon (Hamburger/Close) */}
+            <button 
+              className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-
-        {/* Button */}
-        <button className="bg-green-600 py-2 px-4 rounded text-white">
-          সাইন আপ করো
-        </button>
-
       </div>
-    </div>
+
+      {/* 4. Mobile Menu (Visible when isOpen is true) */}
+      <div 
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96' : 'max-h-0'
+        } bg-gray-800 border-t border-gray-700`}
+      >
+        <div className="flex flex-col items-start px-4 py-4 space-y-3">
+          {navLinks.map((link) => (
+            <a 
+              key={link.name} 
+              href={link.href} 
+              className="w-full py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
+              onClick={toggleMenu} // Close menu on link click
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
 
