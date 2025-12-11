@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   // Define your navigation links
@@ -36,13 +36,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-5 gap-8">
           
-          {/* Column 1: Logo & Social */}
-          <div className="col-span-2 md:col-span-1">
-            <h3 className="text-2xl font-bold text-indigo-400">YourBrand</h3>
-            <p className="mt-4 text-gray-400 text-sm">
-              Building the future, one line of code at a time.
+          {/* Column 1: Logo & Social (2 columns wide on small screens, 1 on md+) */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-1">
+            <h3 className="text-3xl font-extrabold bg-clip-text text-transparent b-linear-to-r from-indigo-400 to-purple-400">
+              YourBrand
+            </h3>
+            <p className="mt-4 text-gray-400 text-sm leading-relaxed">
+              Building the future, one line of code at a time. Empowering your vision with technology.
             </p>
             
             {/* Social Media Icons */}
@@ -53,7 +55,8 @@ const Footer = () => {
                   href={link.href} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-indigo-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded transition-colors duration-200"
+                  aria-label={link.icon.name.replace('Fa', '')}
                 >
                   <link.icon className="h-6 w-6" />
                 </a>
@@ -61,85 +64,60 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Column 2: Company Links */}
-          <div className="col-span-1">
-            <h4 className="text-lg font-semibold text-gray-200 mb-4">Company</h4>
-            <ul className="space-y-3">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-indigo-400 text-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Column 2-4: Link Sections */}
+          {[
+            { title: 'Company', links: companyLinks },
+            { title: 'Support', links: supportLinks },
+            { title: 'Legal', links: legalLinks },
+          ].map((section, sectionIndex) => (
+            <div key={sectionIndex} className="col-span-1">
+              <h4 className="text-lg font-semibold text-gray-200 mb-5 border-b border-gray-700/50 pb-1">
+                {section.title}
+              </h4>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <a 
+                      href={link.href} 
+                      className="text-gray-400 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:text-indigo-400 text-sm transition-colors duration-200 block w-fit"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-          {/* Column 3: Support Links */}
-          <div className="col-span-1">
-            <h4 className="text-lg font-semibold text-gray-200 mb-4">Support</h4>
-            <ul className="space-y-3">
-              {supportLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-indigo-400 text-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Column 4: Legal Links */}
-          <div className="col-span-1">
-            <h4 className="text-lg font-semibold text-gray-200 mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {legalLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-indigo-400 text-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 5: Newsletter (Optional, but useful) */}
-          <div className="col-span-2 md:col-span-1">
-            <h4 className="text-lg font-semibold text-gray-200 mb-4">Stay Updated</h4>
-            <p className="text-gray-400 text-sm mb-3">
-              Subscribe to our newsletter for the latest news.
+          {/* Column 5: Newsletter */}
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+            <h4 className="text-lg font-semibold text-gray-200 mb-5 border-b border-gray-700/50 pb-1">
+              Stay Updated
+            </h4>
+            <p className="text-gray-400 text-sm mb-4">
+              Join our mailing list for exclusive updates and content.
             </p>
             <form className="flex">
               <input 
                 type="email" 
-                placeholder="Enter your email" 
-                className="w-full px-3 py-2 text-sm text-gray-900 rounded-l-lg focus:outline-none"
+                placeholder="Your email address" 
+                className="w-full px-4 py-2 text-sm text-gray-900 rounded-l-lg border-none focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+                aria-label="Email for newsletter"
               />
               <button 
                 type="submit"
-                className="bg-indigo-600 text-white px-4 py-2 text-sm rounded-r-lg hover:bg-indigo-700 transition duration-200"
+                className="bg-indigo-600 text-white px-4 py-2 text-sm font-medium rounded-r-lg hover:bg-indigo-700 transition duration-200 disabled:opacity-50 flex items-center"
               >
-                Go
+                <FaEnvelope className="mr-1 h-4 w-4" /> Sign Up
               </button>
             </form>
           </div>
-
         </div>
 
-        {/* Separator Line */}
+        {/* Separator Line & Copyright */}
         <div className="mt-12 border-t border-gray-700 pt-8">
-          {/* Bottom Row: Copyright */}
-          <p className="text-center text-gray-400 text-sm">
-            &copy; {currentYear} YourBrand Name. All rights reserved.
+          <p className="text-center text-gray-400 text-xs">
+            &copy; {currentYear} YourBrand Name. All rights reserved. | Powered by Passion.
           </p>
         </div>
 
