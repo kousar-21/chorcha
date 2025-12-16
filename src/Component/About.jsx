@@ -29,7 +29,7 @@ const AboutPage = () => {
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden transition-shadow duration-500 hover:shadow-2xl">
         
         {/* Header Section (With Profile Image) */}
-        <header className="text-center p-8 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative">
+        <header className="text-center p-8 bg-linear-to-r from-indigo-600 to-purple-600 text-white relative">
           {/* Profile Image */}
           <img 
             src={personalData.profileImage} 

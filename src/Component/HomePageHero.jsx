@@ -31,7 +31,7 @@ const HomePageHero = () => {
         {/* Main Headline (Updated font weight and gradient) */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
           <span className="block text-gray-100">Deliver Exceptional Results,</span>
-          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
+          <span className="block bg-clip-text text-transparent bg-linear-to-r from-indigo-400 to-purple-400">
             Scale Your Digital Landscape.
           </span>
         </h1>
