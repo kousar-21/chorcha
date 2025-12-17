@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCode, FaPaintBrush, FaCloud, FaRocket, FaLightbulb, FaBookOpen } from 'react-icons/fa'; // Added FaBookOpen
+import { FaCode, FaPaintBrush, FaCloud, FaRocket, FaLightbulb, FaBookOpen, FaArrowRight } from 'react-icons/fa'; // Added FaBookOpen
 
 const FeaturesSection = () => {
     // Define the key features/services
