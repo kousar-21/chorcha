@@ -5,6 +5,7 @@ import AboutPage from '../Component/About';
 import Footer from '../Component/Footer';
 import HomePageHero from '../Component/HomePageHero';
 import FeaturesSection from '../Component/FeaturesSection';
+import ConnectivitySection from '../Component/ConnectivitySection';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero></Hero>
             <HomePageHero></HomePageHero>
             <FeaturesSection></FeaturesSection>
+            <ConnectivitySection></ConnectivitySection>
             <AboutPage></AboutPage>
             <Footer></Footer>
         </div>
