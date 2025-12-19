@@ -6,6 +6,7 @@ import Footer from '../Component/Footer';
 import HomePageHero from '../Component/HomePageHero';
 import FeaturesSection from '../Component/FeaturesSection';
 import ConnectivitySection from '../Component/ConnectivitySection';
+import QuestionSolver from '../Component/QuestionSolver';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <HomePageHero></HomePageHero>
             <FeaturesSection></FeaturesSection>
             <ConnectivitySection></ConnectivitySection>
+            <QuestionSolver></QuestionSolver>
             <AboutPage></AboutPage>
             <Footer></Footer>
         </div>
