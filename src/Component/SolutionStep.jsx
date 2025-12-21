@@ -8,7 +8,7 @@ const SolutionStep = ({ step, index, isOpen, toggle }) => (
       className="w-full py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors px-4"
     >
       <div className="flex items-center gap-4">
-        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
+        <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
           {index + 1}
         </span>
         <span className="font-medium text-gray-700">{step.title}</span>
@@ -21,7 +21,7 @@ const SolutionStep = ({ step, index, isOpen, toggle }) => (
         <p className="leading-relaxed">{step.content}</p>
         {step.hint && (
           <div className="mt-3 flex gap-2 items-start p-3 bg-amber-50 rounded-lg border border-amber-100 text-sm text-amber-800">
-            <Lightbulb className="w-4 h-4 mt-0.5 flex-shrink-0" />
+            <Lightbulb className="w-4 h-4 mt-0.5" />
             <span><strong>Pro Tip:</strong> {step.hint}</span>
           </div>
         )}
