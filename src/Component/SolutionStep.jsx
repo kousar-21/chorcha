@@ -5,7 +5,7 @@ const SolutionStep = ({ step, index, isOpen, toggle, isLast }) => (
   <div className="relative group">
     {/* The Vertical Timeline Line */}
     {!isLast && (
-      <div className="absolute left-[27px] top-[48px] bottom-0 w-0.5 bg-gradient-to-b from-indigo-100 to-transparent z-0" />
+      <div className="absolute left-[27px] top-12 bottom-0 w-0.5 bg-linear-to-b from-indigo-100 to-transparent z-0" />
     )}
 
     <div className={`relative z-10 mb-4 transition-all duration-300 rounded-2xl border ${
@@ -52,7 +52,7 @@ const SolutionStep = ({ step, index, isOpen, toggle, isLast }) => (
           
           {step.hint && (
             <div className="mt-5 relative overflow-hidden group/hint">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-orange-50 opacity-100" />
+              <div className="absolute inset-0 bg-linear-to-r from-amber-50 to-orange-50 opacity-100" />
               <div className="relative p-4 flex gap-3 items-start border border-amber-100 rounded-xl">
                 <div className="bg-white p-1.5 rounded-lg shadow-sm">
                   <Lightbulb className="w-4 h-4 text-amber-500" />
