@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 import { ChevronDown, CheckCircle2, Lightbulb, Sparkles } from 'lucide-react';
 
+// --- MOCK DATA FOR TESTING ---
+const defaultSteps = [
+  {
+    title: "Identify the Variables",
+    content: "First, look at the equation and identify the independent and dependent variables. In most cases, 'x' is your input and 'y' is your output.",
+    hint: "Check the units to ensure they are consistent across all variables."
+  },
+  {
+    title: "Apply the Formula",
+    content: "Substitute your identified values into the standard quadratic formula. Be extra careful with negative signs during this step.",
+    hint: "Use parentheses when substituting negative numbers to avoid calculation errors."
+  },
+  {
+    title: "Simplify and Solve",
+    content: "Reduce the fractions and perform the arithmetic operations in order (PEMDAS). Your final answer should be in its simplest form.",
+    hint: "Double check your multiplication before moving to the final division."
+  }
+];
+
 const SolutionStep = ({ step, index, isOpen, toggle, isLast }) => (
   <div className="relative group">
     {/* The Vertical Timeline Line */}
@@ -30,7 +49,7 @@ const SolutionStep = ({ step, index, isOpen, toggle, isLast }) => (
               Step {index + 1}
             </span>
             <span className={`text-lg font-semibold transition-colors ${isOpen ? 'text-gray-900' : 'text-gray-600'}`}>
-              {step.title}
+              {step?.title || "Untitled Step"}
             </span>
           </div>
         </div>
@@ -47,10 +66,10 @@ const SolutionStep = ({ step, index, isOpen, toggle, isLast }) => (
         <div className="px-5 pb-6 ml-[60px] pr-8">
           <div className="h-px w-full bg-gray-100 mb-4" />
           <p className="text-gray-600 leading-relaxed text-base">
-            {step.content}
+            {step?.content || "No content available for this step."}
           </p>
           
-          {step.hint && (
+          {step?.hint && (
             <div className="mt-5 relative overflow-hidden group/hint">
               <div className="absolute inset-0 bg-linear-to-r from-amber-50 to-orange-50 opacity-100" />
               <div className="relative p-4 flex gap-3 items-start border border-amber-100 rounded-xl">
@@ -70,8 +89,14 @@ const SolutionStep = ({ step, index, isOpen, toggle, isLast }) => (
   </div>
 );
 
-const StepByStepSolution = ({ steps }) => {
+// Added a default empty array to 'steps' to prevent the .map error
+const StepByStepSolution = ({ steps = defaultSteps }) => {
   const [openIndex, setOpenIndex] = useState(0);
+
+  // Safety check to handle empty data gracefully
+  if (!steps || steps.length === 0) {
+    return <div className="p-8 text-center text-gray-500">No solution steps provided.</div>;
+  }
 
   return (
     <div className="max-w-2xl mx-auto mt-12 p-2">
@@ -88,7 +113,7 @@ const StepByStepSolution = ({ steps }) => {
         </div>
         <div className="text-right">
           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Difficulty</span>
-          <div className="flex gap-1 mt-1">
+          <div className="flex gap-1 mt-1 justify-end">
             <div className="w-4 h-1.5 rounded-full bg-indigo-600" />
             <div className="w-4 h-1.5 rounded-full bg-indigo-600" />
             <div className="w-4 h-1.5 rounded-full bg-gray-200" />
@@ -112,7 +137,9 @@ const StepByStepSolution = ({ steps }) => {
 
       {/* Footer Encouragement */}
       <div className="mt-8 text-center py-6 border-t border-gray-100">
-        <p className="text-gray-400 text-sm">Still confused? <button className="text-indigo-600 font-bold hover:underline">Ask a Tutor</button></p>
+        <p className="text-gray-400 text-sm">
+          Still confused? <button className="text-indigo-600 font-bold hover:underline">Ask a Tutor</button>
+        </p>
       </div>
     </div>
   );
