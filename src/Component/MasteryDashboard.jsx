@@ -34,7 +34,7 @@ const MasteryDashboard = () => {
     <div className="max-w-4xl mx-auto p-4 space-y-6">
       {/* Top Stats Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-gradient-to-br from-indigo-600 to-violet-700 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
+        <div className="bg-linear-to-br from-indigo-600 to-violet-700 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
           <Award className="absolute -right-4 -bottom-4 w-32 h-32 opacity-10 rotate-12" />
           <p className="text-indigo-100 text-sm font-medium">Global Rank</p>
           <h4 className="text-3xl font-bold mt-1">#1,240</h4>

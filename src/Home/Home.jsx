@@ -8,6 +8,7 @@ import FeaturesSection from '../Component/FeaturesSection';
 import ConnectivitySection from '../Component/ConnectivitySection';
 import QuestionSolver from '../Component/QuestionSolver';
 import StepByStepSolution from '../Component/SolutionStep';
+import MasteryDashboard from '../Component/MasteryDashboard';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <ConnectivitySection></ConnectivitySection>
             <QuestionSolver></QuestionSolver>
             <StepByStepSolution></StepByStepSolution>
+            <MasteryDashboard></MasteryDashboard>
             <AboutPage></AboutPage>
             <Footer></Footer>
         </div>
