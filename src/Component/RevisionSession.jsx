@@ -6,12 +6,12 @@ const Flashcard = ({ front, back, category }) => {
   const [status, setStatus] = useState(null); // 'known' | 'learning' | null
 
   return (
-    <div className="group h-[350px] w-full [perspective:1000px]">
+    <div className="group h-[350px] w-full perspective:1000px">
       <div 
-        className={`relative h-full w-full rounded-3xl transition-all duration-500 [transform-style:preserve-3d] shadow-xl ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
+        className={`relative h-full w-full rounded-3xl transition-all duration-500 shadow-xl ${isFlipped ? '' : ''}`}
       >
         {/* Front Side */}
-        <div className="absolute inset-0 h-full w-full rounded-3xl bg-white p-8 [backface-visibility:hidden] border-2 border-gray-50 flex flex-col justify-between">
+        <div className="absolute inset-0 h-full w-full rounded-3xl bg-white p-8 border-2 border-gray-50 flex flex-col justify-between">
           <div className="flex justify-between items-center">
             <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold uppercase tracking-widest">
               {category}
@@ -33,7 +33,7 @@ const Flashcard = ({ front, back, category }) => {
         </div>
 
         {/* Back Side */}
-        <div className="absolute inset-0 h-full w-full rounded-3xl bg-indigo-600 p-8 text-white [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between shadow-2xl shadow-indigo-200">
+        <div className="absolute inset-0 h-full w-full rounded-3xl bg-indigo-600 p-8 text-white flex flex-col justify-between shadow-2xl shadow-indigo-200">
           <div className="text-indigo-200 text-xs font-bold uppercase tracking-widest">
             Correct Answer
           </div>
