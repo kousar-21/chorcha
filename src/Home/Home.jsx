@@ -9,6 +9,7 @@ import ConnectivitySection from '../Component/ConnectivitySection';
 import QuestionSolver from '../Component/QuestionSolver';
 import StepByStepSolution from '../Component/SolutionStep';
 import MasteryDashboard from '../Component/MasteryDashboard';
+import RevisionSession from '../Component/RevisionSession';
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <QuestionSolver></QuestionSolver>
             <StepByStepSolution></StepByStepSolution>
             <MasteryDashboard></MasteryDashboard>
+            <RevisionSession></RevisionSession>
             <AboutPage></AboutPage>
             <Footer></Footer>
         </div>
