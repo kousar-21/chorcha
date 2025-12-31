@@ -3,7 +3,7 @@ import { RefreshCcw, Check, X, Info, Trophy } from 'lucide-react';
 
 const Flashcard = ({ front, back, category }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [status, setStatus] = useState(null); // 'known' | 'learning' | null
+  const [status, setStatus] = useState(null);
 
   return (
     <div className="group h-[350px] w-full perspective:1000px">
