@@ -23,7 +23,6 @@ const Home = () => {
             <StepByStepSolution></StepByStepSolution>
             <MasteryDashboard></MasteryDashboard>
             <RevisionSession></RevisionSession>
-            <AboutPage></AboutPage>
             <Footer></Footer>
         </div>
     );
