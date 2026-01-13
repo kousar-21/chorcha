@@ -93,7 +93,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section - NEW */}
+      {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto bg-blue-600 rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
             <div className="relative z-10">

@@ -18,7 +18,7 @@ const Contact = () => {
       <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-16">
           
-          {/* Left Side: Contact Information */}
+          {/* Left Side: Contact Information*/}
           <div>
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
             <p className="text-gray-600 mb-8">
