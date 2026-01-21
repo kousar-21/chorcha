@@ -23,46 +23,54 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Logo Cloud - Build Authority */}
-        <div className="text-center mb-20">
-          <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">
+        <div className="text-center mb-12">
+          <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wider mb-6">
             Trusted by industry leaders
           </p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Simple Text Logos for Placeholder */}
-            <span className="text-2xl font-bold text-slate-800">GOOGLE</span>
-            <span className="text-2xl font-bold text-slate-800">STRIPE</span>
-            <span className="text-2xl font-bold text-slate-800">AIRBNB</span>
-            <span className="text-2xl font-bold text-slate-800">SHOPIFY</span>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            {/* Professional Logo Placeholders */}
+            <div className="flex items-center justify-center w-24 h-12 bg-gray-100 rounded-lg">
+              <span className="text-gray-600 font-medium text-sm">Google</span>
+            </div>
+            <div className="flex items-center justify-center w-24 h-12 bg-gray-100 rounded-lg">
+              <span className="text-gray-600 font-medium text-sm">Stripe</span>
+            </div>
+            <div className="flex items-center justify-center w-24 h-12 bg-gray-100 rounded-lg">
+              <span className="text-gray-600 font-medium text-sm">Airbnb</span>
+            </div>
+            <div className="flex items-center justify-center w-24 h-12 bg-gray-100 rounded-lg">
+              <span className="text-gray-600 font-medium text-sm">Shopify</span>
+            </div>
           </div>
         </div>
 
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-            Don't take our word for it.
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-2">
             We've helped hundreds of businesses scale their digital presence. 
-            Here is what some of them have to say.
+            Here's what some of them have to say about working with us.
           </p>
         </div>
 
         {/* Testimonial Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {reviews.map((review, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300"
+              className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
               <div>
                 {/* 5-Star Rating */}
-                <div className="flex text-yellow-400 mb-4 text-sm">
+                <div className="flex text-amber-400 mb-6">
                   {"★★★★★".split("").map((star, i) => (
-                    <span key={i}>{star}</span>
+                    <span key={i} className="text-xl">{star}</span>
                   ))}
                 </div>
                 <p className="text-gray-700 leading-relaxed italic mb-8">
@@ -74,11 +82,11 @@ const Testimonials = () => {
                 <img 
                   src={review.avatar} 
                   alt={review.name} 
-                  className="w-12 h-12 rounded-full border-2 border-blue-50"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-indigo-100"
                 />
                 <div>
-                  <h4 className="font-bold text-slate-900">{review.name}</h4>
-                  <p className="text-xs text-blue-600 font-semibold">{review.role}</p>
+                  <h4 className="font-semibold text-gray-900">{review.name}</h4>
+                  <p className="text-sm text-indigo-600 font-medium">{review.role}</p>
                 </div>
               </div>
             </div>
