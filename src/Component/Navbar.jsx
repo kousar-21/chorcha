@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // Using lucide-react (a popular React Icons library) for clarity
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router";
 import logo from "../assets/download.png";
 
 const Navbar = () => {
@@ -15,6 +16,10 @@ const Navbar = () => {
     { name: "ফিচারসমূহ", href: "#features" },
     { name: "চর্চা সাফল্য", href: "#success" },
     { name: "সাবস্ক্রিপশন", href: "#subscription" },
+    { name: "আমাদের সম্পর্কে", href: "/about" },
+    { name: "সেবাসমূহ", href: "/services" },
+    { name: "যোগাযোগ", href: "/contact" },
+    { name: "প্রতিক্রিয়া", href: "/testimonials" },
   ];
 
   return (
@@ -32,15 +37,25 @@ const Navbar = () => {
           </a>
 
           {/* 2. Desktop Menu Links */}
-          <div className="hidden md:flex items-center gap-8 lg:gap-10">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="hover:text-green-400 transition-colors cursor-pointer"
-              >
-                {link.name}
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="hover:text-green-400 transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="hover:text-green-400 transition-colors cursor-pointer"
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
 
@@ -71,14 +86,25 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-start px-4 py-4 space-y-3">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="w-full py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
-              onClick={toggleMenu} // Close menu on link click
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('/') ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="w-full py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
+                onClick={toggleMenu}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="w-full py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors cursor-pointer"
+                onClick={toggleMenu}
+              >
+                {link.name}
+              </a>
+            )
           ))}
         </div>
       </div>
