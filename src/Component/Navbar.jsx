@@ -12,10 +12,13 @@ const Navbar = () => {
   };
 
   // Define Nav links as an array for cleaner iteration
-  const navLinks = [
+  const primaryLinks = [
     { name: "ফিচারসমূহ", href: "#features" },
     { name: "চর্চা সাফল্য", href: "#success" },
     { name: "সাবস্ক্রিপশন", href: "#subscription" },
+  ];
+  
+  const pageLinks = [
     { name: "আমাদের সম্পর্কে", href: "/about" },
     { name: "সেবাসমূহ", href: "/services" },
     { name: "যোগাযোগ", href: "/contact" },
@@ -38,25 +41,34 @@ const Navbar = () => {
 
           {/* 2. Desktop Menu Links */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map((link) => (
-              link.href.startsWith('/') ? (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="hover:text-green-400 transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ) : (
+            {/* Primary navigation links */}
+            <div className="flex items-center gap-6 lg:gap-8">
+              {primaryLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="hover:text-green-400 transition-colors cursor-pointer"
+                  className="hover:text-green-400 transition-colors cursor-pointer font-medium border-b border-transparent hover:border-green-400 pb-1"
                 >
                   {link.name}
                 </a>
-              )
-            ))}
+              ))}
+            </div>
+            
+            {/* Separator for page links */}
+            <div className="h-6 w-px bg-gray-600"></div>
+            
+            {/* Page navigation links */}
+            <div className="flex items-center gap-4">
+              {pageLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="hover:text-green-400 transition-colors font-medium border-b border-transparent hover:border-green-400 pb-1"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* 3. Desktop Button & Mobile Menu Button */}
@@ -81,31 +93,37 @@ const Navbar = () => {
       {/* 4. Mobile Menu (Visible when isOpen is true) */}
       <div 
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96' : 'max-h-0'
+          isOpen ? 'max-h-[500px]' : 'max-h-0'
         } bg-gray-800 border-t border-gray-700`}
       >
-        <div className="flex flex-col items-start px-4 py-4 space-y-3">
-          {navLinks.map((link) => (
-            link.href.startsWith('/') ? (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="w-full py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
-                onClick={toggleMenu}
-              >
-                {link.name}
-              </Link>
-            ) : (
+        <div className="flex flex-col px-4 py-4 space-y-1">
+          <div className="mb-3">
+            <h3 className="text-xs uppercase font-semibold text-gray-400 mb-2">ফিচারসমূহ</h3>
+            {primaryLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="w-full py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors cursor-pointer"
+                className="block py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
                 onClick={toggleMenu}
               >
                 {link.name}
               </a>
-            )
-          ))}
+            ))}
+          </div>
+          
+          <div>
+            <h3 className="text-xs uppercase font-semibold text-gray-400 mb-2">পেজসমূহ</h3>
+            {pageLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="block py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
+                onClick={toggleMenu}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
