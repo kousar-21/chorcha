@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: "সেবাসমূহ", href: "/services" },
     { name: "যোগাযোগ", href: "/contact" },
     { name: "প্রতিক্রিয়া", href: "/testimonials" },
+    { name: "মূল্য নির্ধারণ", href: "/pricing" },
   ];
 
   return (
