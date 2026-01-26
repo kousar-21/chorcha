@@ -1,147 +1,144 @@
 import React from 'react';
-import { FaLaptopCode, FaUserTie, FaEnvelope, FaGithub, FaLinkedin, FaCodeBranch, FaCheckCircle } from 'react-icons/fa';
 
 const AboutPage = () => {
-  const personalData = {
-    name: "Alex Johnson",
-    title: "Full-Stack Developer | Creative Technologist",
-    // Added a placeholder for the profile image source
-    profileImage: "https://via.placeholder.com/150/4f46e5/ffffff?text=AJ", 
-    bio: "Hello! I'm Alex, a passionate developer with 5+ years of experience building scalable and robust web applications. My expertise lies in the MERN stack (MongoDB, Express, React, Node.js), but I love diving into new technologies and solving complex problems with clean, efficient code. I believe technology should not just function, but inspire.",
-    focusAreas: [
-      "Frontend Architecture (React, Next.js)",
-      "API Design and Development (Node.js, Express)",
-      "Cloud Services & DevOps (AWS, Docker)",
-      "Technical Writing and Mentorship",
+  const companyInfo = {
+    name: "Chorcha",
+    title: "একাডেমিক সাফল্যের জন্য ডিজিটাল সহায়ক প্ল্যাটফর্ম",
+    description: "চর্চা হল একটি বাংলাদেশি একাডেমিক সহায়তা প্ল্যাটফর্ম যা শিক্ষার্থীদের বিভিন্ন প্রশ্নের সমাধান ও গাইডলাইন প্রদানের মাধ্যমে তাদের শিক্ষাগত সাফল্যে সহায়তা করে। আমাদের লক্ষ্য হলো প্রযুক্তির মাধ্যমে শিক্ষার সুযোগ-সুবিধা সবার কাছে পৌঁছে দেওয়া।",
+    mission: "আমাদের মিশন হলো প্রযুক্তি ও স্মার্ট টুলের মাধ্যমে শিক্ষার্থীদের পড়াশোনার যাত্রাকে সহজ ও কার্যকর করা।",
+    vision: "বাংলাদেশের শিক্ষাক্ষেত্রে প্রযুক্তির ব্যবহার বৃদ্ধি করে একটি স্বপ্নের দেশ গঠনে অবদান রাখা।",
+    foundingYear: "২০২৩",
+    teamSize: "১০+ সদস্য",
+    achievements: [
+      "৫০০০+ শিক্ষার্থীকে সাহায্য করেছি",
+      "১০০০০+ প্রশ্নের সমাধান প্রদান করেছি",
+      "১০০+ স্কুল/কলেজের সাথে সহযোগিতা করছি",
     ],
-    // Added a dedicated Tech Stack for visualization
-    techStack: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker", "Next.js"],
-    keyStat: "Successfully launched 12+ production applications and managed teams of 5 developers.",
     contact: {
-      email: "alex.johnson@example.com",
-      github: "https://github.com/your-github-profile",
-      linkedin: "https://linkedin.com/in/your-linkedin-profile",
+      email: "info@chorcha.bangladesh",
+      phone: "+৮৮০-১৭১২-৩৪৫৬৭৮",
+      address: "ঢাকা, বাংলাদেশ",
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-8 lg:p-12">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden transition-shadow duration-500 hover:shadow-2xl">
-        
-        {/* Header Section (With Profile Image) */}
-        <header className="text-center p-8 bg-linear-to-r from-indigo-600 to-purple-600 text-white relative">
-          {/* Profile Image */}
-          <img 
-            src={personalData.profileImage} 
-            alt={`${personalData.name} Profile`} 
-            className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white object-cover transform transition-transform duration-300 hover:scale-105 shadow-xl" 
-          />
-          <h1 className="text-4xl font-extrabold tracking-tight mb-1">
-            {personalData.name}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block p-1 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mb-6">
+            <div className="bg-white p-1 rounded-full">
+              <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-4xl font-bold text-white">C</span>
+              </div>
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {companyInfo.name}
           </h1>
-          <p className="text-xl font-light opacity-90">
-            {personalData.title}
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            {companyInfo.title}
           </p>
-        </header>
+        </div>
 
-        {/* Content Section */}
-        <section className="p-8 lg:p-10 divide-y divide-gray-200">
+        {/* Company Description */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
+            আমাদের সম্পর্কে
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            {companyInfo.description}
+          </p>
           
-          {/* 1. Bio/Introduction */}
-          <div className="pb-8">
-            <h2 className="text-3xl font-bold text-gray-800 flex items-center mb-4">
-              <FaUserTie className="mr-3 text-indigo-500" /> 
-              Who I Am
-            </h2>
-            <p className="text-gray-600 leading-relaxed italic border-l-4 border-indigo-400 pl-4 py-2 bg-indigo-50/50 rounded">
-              {personalData.bio}
-            </p>
-          </div>
-
-          {/* 2. Key Experience Snippet (New Section) */}
-          <div className="py-8">
-            <h2 className="text-2xl font-semibold text-gray-800 flex items-center mb-4">
-              <FaCheckCircle className="mr-3 text-green-500" /> 
-              My Impact
-            </h2>
-            <p className="text-lg text-gray-700 font-medium bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-              {personalData.keyStat}
-            </p>
-          </div>
-
-          {/* 3. Tech Stack (New Section) */}
-          <div className="py-8">
-            <h2 className="text-2xl font-semibold text-gray-800 flex items-center mb-4">
-              <FaCodeBranch className="mr-3 text-purple-500" /> 
-              Technical Stack
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              {personalData.techStack.map((tech, index) => (
-                <span 
-                  key={index} 
-                  className="px-4 py-1.5 text-sm font-medium text-white bg-gray-700 rounded-full shadow-md hover:bg-indigo-600 transition-colors duration-200 cursor-default"
-                >
-                  {tech}
-                </span>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">১</span>
+                মিশন
+              </h3>
+              <p className="text-gray-700">
+                {companyInfo.mission}
+              </p>
             </div>
-          </div>
-          
-          {/* 4. Expertise/Focus Areas (Modified original section) */}
-          <div className="pt-8">
-            <h2 className="text-2xl font-semibold text-gray-800 flex items-center mb-4">
-              <FaLaptopCode className="mr-3 text-indigo-500" /> 
-              Focus & Methodology
-            </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
-              {personalData.focusAreas.map((area, index) => (
-                <li key={index} className="flex items-start bg-indigo-50 p-4 rounded-lg border border-indigo-200 hover:shadow-md transition-shadow">
-                  <span className="text-indigo-600 mr-3 mt-1"><FaCheckCircle className="h-4 w-4" /></span>
-                  <span className="text-gray-700 font-medium">{area}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 5. Call to Action/Contact */}
-          <div className="text-center pt-8 mt-8">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">
-              Let's Connect!
-            </h3>
-            <p className="text-gray-600 mb-8 max-w-lg mx-auto">
-              I'm always open to discussing new projects, collaboration opportunities, or sharing insights. Reach out below!
-            </p>
             
-            {/* Social Links */}
-            <div className="flex justify-center gap-6">
-              <a 
-                href={`mailto:${personalData.contact.email}`} 
-                className="flex items-center text-white bg-indigo-500 hover:bg-purple-600 px-6 py-3 rounded-full shadow-lg transition duration-300 transform hover:scale-105 font-semibold"
-              >
-                <FaEnvelope className="mr-2" /> Say Hello
-              </a>
-              <a 
-                href={personalData.contact.linkedin} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-indigo-600 transition duration-300 text-4xl transform hover:scale-110"
-                aria-label="LinkedIn Profile"
-              >
-                <FaLinkedin />
-              </a>
-              <a 
-                href={personalData.contact.github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-indigo-600 transition duration-300 text-4xl transform hover:scale-110"
-                aria-label="GitHub Profile"
-              >
-                <FaGithub />
-              </a>
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mr-3">২</span>
+                ভিশন
+              </h3>
+              <p className="text-gray-700">
+                {companyInfo.vision}
+              </p>
             </div>
           </div>
-        </section>
+        </div>
 
+        {/* Stats Section */}
+        <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl p-8 mb-12 text-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold mb-2">{companyInfo.foundingYear}</div>
+              <div className="text-lg opacity-90">প্রতিষ্ঠানের শুরু</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">{companyInfo.teamSize}</div>
+              <div className="text-lg opacity-90">দক্ষ দল</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">২৪/৭</div>
+              <div className="text-lg opacity-90">সাপোর্ট</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Achievements */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center pb-4 border-b border-gray-200">
+            আমাদের অর্জন
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {companyInfo.achievements.map((achievement, index) => (
+              <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  {index + 1}
+                </div>
+                <p className="text-gray-800 font-medium">{achievement}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center pb-4 border-b border-gray-200">
+            যোগাযোগ করুন
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="p-6 bg-blue-50 rounded-xl">
+              <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                📧
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">ইমেইল</h3>
+              <p className="text-gray-700">{companyInfo.contact.email}</p>
+            </div>
+            
+            <div className="p-6 bg-green-50 rounded-xl">
+              <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                📞
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">ফোন</h3>
+              <p className="text-gray-700">{companyInfo.contact.phone}</p>
+            </div>
+            
+            <div className="p-6 bg-purple-50 rounded-xl">
+              <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                📍
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">ঠিকানা</h3>
+              <p className="text-gray-700">{companyInfo.contact.address}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
