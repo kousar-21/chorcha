@@ -22,13 +22,13 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-block p-1 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mb-6">
+          <div className="inline-block p-1 bg-linear-to-r from-green-500 to-blue-600 rounded-full mb-6">
             <div className="bg-white p-1 rounded-full">
-              <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-24 h-24 bg-linear-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto">
                 <span className="text-4xl font-bold text-white">C</span>
               </div>
             </div>
@@ -51,7 +51,7 @@ const AboutPage = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
+            <div className="bg-linear-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
               <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                 <span className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">১</span>
                 মিশন
@@ -61,7 +61,7 @@ const AboutPage = () => {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
               <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                 <span className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mr-3">২</span>
                 ভিশন
@@ -74,7 +74,7 @@ const AboutPage = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl p-8 mb-12 text-white">
+        <div className="bg-linear-to-r from-green-500 to-blue-600 rounded-2xl p-8 mb-12 text-white">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">{companyInfo.foundingYear}</div>
@@ -98,7 +98,7 @@ const AboutPage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {companyInfo.achievements.map((achievement, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+              <div key={index} className="text-center p-6 bg-linear-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {index + 1}
                 </div>
