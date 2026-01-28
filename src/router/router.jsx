@@ -6,6 +6,7 @@ import Contact from "../Component/Contact";
 import Services from "../Component/Services";
 import Testimonials from "../Pages/Testimonials";
 import Pricing from "../Pages/Pricing";
+import Blog from "../Pages/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing></Pricing>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
       }
     ]
   },

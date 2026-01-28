@@ -24,6 +24,7 @@ const Navbar = () => {
     { name: "যোগাযোগ", href: "/contact" },
     { name: "প্রতিক্রিয়া", href: "/testimonials" },
     { name: "মূল্য নির্ধারণ", href: "/pricing" },
+    { name: "ব্লগ", href: "/blog" },
   ];
 
   return (
