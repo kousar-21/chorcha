@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Section */}
@@ -66,7 +66,7 @@ const Contact = () => {
               
               {/* Email */}
               <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="bg-green-100 p-3 rounded-xl text-green-600 flex-shrink-0">
+                <div className="bg-green-100 p-3 rounded-xl text-green-600">
                   <span className="text-2xl">📧</span>
                 </div>
                 <div>
@@ -77,7 +77,7 @@ const Contact = () => {
 
               {/* Phone */}
               <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="bg-blue-100 p-3 rounded-xl text-blue-600 flex-shrink-0">
+                <div className="bg-blue-100 p-3 rounded-xl text-blue-600">
                   <span className="text-2xl">📞</span>
                 </div>
                 <div>
@@ -88,7 +88,7 @@ const Contact = () => {
 
               {/* Address */}
               <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="bg-purple-100 p-3 rounded-xl text-purple-600 flex-shrink-0">
+                <div className="bg-purple-100 p-3 rounded-xl text-purple-600">
                   <span className="text-2xl">📍</span>
                 </div>
                 <div>
@@ -99,7 +99,7 @@ const Contact = () => {
 
               {/* Working Hours */}
               <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="bg-yellow-100 p-3 rounded-xl text-yellow-600 flex-shrink-0">
+                <div className="bg-yellow-100 p-3 rounded-xl text-yellow-600">
                   <span className="text-2xl">🕐</span>
                 </div>
                 <div>
@@ -216,7 +216,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="w-full bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   বার্তা পাঠান
                 </button>
