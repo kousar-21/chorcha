@@ -92,7 +92,7 @@ const Tech = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -129,7 +129,7 @@ const Tech = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-colors duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-md'
+                      ? 'bg-linear-to-r from-green-500 to-blue-600 text-white shadow-md'
                       : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
@@ -182,7 +182,7 @@ const Tech = () => {
 
         {/* Security & Compliance Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
+          <div className="bg-linear-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">নিরাপত্তা ব্যবস্থা</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
@@ -204,7 +204,7 @@ const Tech = () => {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">
+          <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">পারফরমেন্স</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
@@ -233,7 +233,7 @@ const Tech = () => {
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             আমাদের টেকনিক্যাল ডকুমেন্টেশন, API রেফারেন্স এবং অংশগ্রহণের সুযোগ সম্পর্কে জানতে আমাদের সাথে যোগাযোগ করুন।
           </p>
-          <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <button className="bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             যোগাযোগ করুন
           </button>
         </div>
