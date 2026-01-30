@@ -80,7 +80,7 @@ const Blog = () => {
     : blogPosts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -160,7 +160,7 @@ const Blog = () => {
                   </div>
                 </div>
                 
-                <button className="mt-4 w-full bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
+                <button className="mt-4 w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
                   পড়ুন
                 </button>
               </div>
@@ -169,7 +169,7 @@ const Blog = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-16 bg-linear-to-r from-green-500 to-blue-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             আমাদের ব্লগে সাবস্ক্রাইব করুন
           </h2>

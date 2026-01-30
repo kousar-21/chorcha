@@ -7,6 +7,7 @@ import Services from "../Component/Services";
 import Testimonials from "../Pages/Testimonials";
 import Pricing from "../Pages/Pricing";
 import Blog from "../Pages/Blog";
+import Tech from "../Pages/Tech";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/tech",
+        element: <Tech></Tech>
       }
     ]
   },
