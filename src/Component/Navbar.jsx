@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: "মূল্য নির্ধারণ", href: "/pricing" },
     { name: "ব্লগ", href: "/blog" },
     { name: "প্রযুক্তি", href: "/tech" },
+    { name: "ছাড়", href: "/discount" },
   ];
 
   return (

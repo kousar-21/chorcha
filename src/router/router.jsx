@@ -8,6 +8,7 @@ import Testimonials from "../Pages/Testimonials";
 import Pricing from "../Pages/Pricing";
 import Blog from "../Pages/Blog";
 import Tech from "../Pages/Tech";
+import Discount from "../Pages/Discount";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/tech",
         element: <Tech></Tech>
+      },
+      {
+        path: "/discount",
+        element: <Discount></Discount>
       }
     ]
   },
