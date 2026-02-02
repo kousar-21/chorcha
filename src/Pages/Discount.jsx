@@ -126,11 +126,11 @@ const Discount = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-full mb-4">
+          <div className="inline-block px-4 py-1 bg-linear-to-r from-green-500 to-blue-600 text-white rounded-full mb-4">
             <span className="font-bold">সীমিত সময়ের অফার!</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -149,7 +149,7 @@ const Discount = () => {
                 onClick={() => setSelectedPlan('monthly')}
                 className={`px-6 py-3 rounded-xl font-medium transition-colors duration-300 ${
                   selectedPlan === 'monthly'
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-md'
+                    ? 'bg-linear-to-r from-green-500 to-blue-600 text-white shadow-md'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -159,7 +159,7 @@ const Discount = () => {
                 onClick={() => setSelectedPlan('yearly')}
                 className={`px-6 py-3 rounded-xl font-medium transition-colors duration-300 ${
                   selectedPlan === 'yearly'
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-md'
+                    ? 'bg-linear-to-r from-green-500 to-blue-600 text-white shadow-md'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -182,7 +182,7 @@ const Discount = () => {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-linear-to-r from-green-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     সবচেয়ে জনপ্রিয়
                   </span>
                 </div>
@@ -219,7 +219,7 @@ const Discount = () => {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
-                    <span className="w-5 h-5 bg-green-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                    <span className="w-5 h-5 bg-green-500 text-white rounded-full flex items-center justify-center mr-3">
                       ✓
                     </span>
                     <span className="text-gray-700">{feature}</span>
@@ -230,7 +230,7 @@ const Discount = () => {
               <button 
                 className={`w-full py-3 px-4 rounded-lg font-bold transition-colors duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white shadow-lg'
+                    ? 'bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white shadow-lg'
                     : 'bg-gray-800 hover:bg-black text-white'
                 }`}
               >
@@ -241,7 +241,7 @@ const Discount = () => {
         </div>
 
         {/* Promo Code Section */}
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-16">
+        <div className="bg-linear-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">প্রোমো কোড প্রয়োগ করুন</h2>
           <div className="max-w-md mx-auto flex">
             <input
@@ -253,7 +253,7 @@ const Discount = () => {
             />
             <button
               onClick={applyPromoCode}
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-r-lg transition-colors duration-300"
+              className="bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-r-lg transition-colors duration-300"
             >
               প্রয়োগ করুন
             </button>
