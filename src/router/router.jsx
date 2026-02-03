@@ -9,6 +9,7 @@ import Pricing from "../Pages/Pricing";
 import Blog from "../Pages/Blog";
 import Tech from "../Pages/Tech";
 import Discount from "../Pages/Discount";
+import Offer from "../Pages/Offer";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: "/discount",
         element: <Discount></Discount>
+      },
+      {
+        path: "/offer",
+        element: <Offer></Offer>
       }
     ]
   },
