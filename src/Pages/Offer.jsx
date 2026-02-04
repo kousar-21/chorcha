@@ -120,7 +120,7 @@ const Offer = () => {
                   <div className={`absolute -top-3 -right-3 bg-linear-to-r ${offer.color} text-white px-3 py-1 rounded-full text-sm font-bold`}>
                     {offer.badge}
                   </div>
-                  <div className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-4 text-center">
+                  <div className="bg-linear-to-r from-gray-100 to-gray-200 rounded-xl p-4 text-center">
                     <div className="text-3xl font-bold text-gray-800 line-through opacity-60 mb-1">
                       {offer.originalPrice}
                     </div>
@@ -186,7 +186,7 @@ const Offer = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">অফার সমাপ্তির জন্য সময় চলছে</h3>
           <div className="flex justify-center space-x-4">
             {['১৫', '২২', '০৮', '৪৫'].map((time, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 min-w-[80px] shadow-md">
+              <div key={index} className="bg-white rounded-lg p-4 min-w-20 shadow-md">
                 <div className="text-2xl font-bold text-gray-900">{time}</div>
                 <div className="text-sm text-gray-600">
                   {index === 0 && 'দিন'}
