@@ -28,6 +28,7 @@ const Navbar = () => {
     { name: "প্রযুক্তি", href: "/tech" },
     { name: "ছাড়", href: "/discount" },
     { name: "অফার", href: "/offer" },
+    { name: "চর্চার শুরু", href: "/chorchastart" },
   ];
 
   return (
