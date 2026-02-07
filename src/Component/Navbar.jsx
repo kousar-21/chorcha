@@ -29,6 +29,7 @@ const Navbar = () => {
     { name: "ছাড়", href: "/discount" },
     { name: "অফার", href: "/offer" },
     { name: "চর্চার শুরু", href: "/chorchastart" },
+    { name: "খেলার সুযোগ", href: "/gameopportunity" },
   ];
 
   return (

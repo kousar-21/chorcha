@@ -11,6 +11,7 @@ import Tech from "../Pages/Tech";
 import Discount from "../Pages/Discount";
 import Offer from "../Pages/Offer";
 import ChorchaStart from "../Pages/ChorchaStart";
+import GameOpportunity from "../Pages/GameOpportunity";
 
 export const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ export const router = createBrowserRouter([
       {
         path: "/chorchastart",
         element: <ChorchaStart></ChorchaStart>
+      },
+      {
+        path: "/gameopportunity",
+        element: <GameOpportunity></GameOpportunity>
       }
     ]
   },
