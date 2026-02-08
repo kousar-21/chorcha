@@ -171,7 +171,7 @@ const GameOpportunity = () => {
                 {!gameActive && !showResult && (
                   <button
                     onClick={startGame}
-                    className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    className="bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     খেলা শুরু করুন
                   </button>
@@ -194,7 +194,7 @@ const GameOpportunity = () => {
                     <div className="flex space-x-4 justify-center">
                       <button
                         onClick={startGame}
-                        className="bg-gradient-to-r from-green-500 to-blue-600 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-300"
+                        className="bg-linear-to-r from-green-500 to-blue-600 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-300"
                       >
                         আবার খেলুন
                       </button>
@@ -212,7 +212,7 @@ const GameOpportunity = () => {
               {/* Current Question */}
               {gameActive && currentQuestion && (
                 <div className="mb-8">
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-2xl mb-6">
+                  <div className="bg-linear-to-r from-purple-500 to-pink-500 text-white p-6 rounded-2xl mb-6">
                     <h3 className="text-2xl font-bold mb-2">
                       {currentQuestion.type || "প্রশ্ন"}:
                     </h3>
@@ -316,7 +316,7 @@ const GameOpportunity = () => {
             </div>
 
             {/* Rewards */}
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 border-2 border-yellow-200">
+            <div className="bg-linear-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 border-2 border-yellow-200">
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">পুরস্কার সিস্টেম</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
