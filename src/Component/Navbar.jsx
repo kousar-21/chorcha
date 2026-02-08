@@ -11,125 +11,126 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Define Nav links as an array for cleaner iteration
-  const primaryLinks = [
+  // Main navigation links - essential pages only
+  const mainLinks = [
+    { name: "হোম", href: "/" },
     { name: "ফিচারসমূহ", href: "#features" },
-    { name: "চর্চা সাফল্য", href: "#success" },
-    { name: "সাবস্ক্রিপশন", href: "#subscription" },
-  ];
-  
-  const pageLinks = [
     { name: "আমাদের সম্পর্কে", href: "/about" },
     { name: "সেবাসমূহ", href: "/services" },
-    { name: "যোগাযোগ", href: "/contact" },
-    { name: "প্রতিক্রিয়া", href: "/testimonials" },
     { name: "মূল্য নির্ধারণ", href: "/pricing" },
-    { name: "ব্লগ", href: "/blog" },
-    { name: "প্রযুক্তি", href: "/tech" },
-    { name: "ছাড়", href: "/discount" },
-    { name: "অফার", href: "/offer" },
-    { name: "চর্চার শুরু", href: "/chorchastart" },
-    { name: "খেলার সুযোগ", href: "/gameopportunity" },
+    { name: "যোগাযোগ", href: "/contact" },
   ];
 
   return (
-    <nav className="bg-gray-900 text-white text-sm sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex justify-between items-center">
+    <nav className="bg-white text-gray-800 text-sm sticky top-0 z-50 shadow-md border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           
-          {/* 1. Logo */}
-          <a href="/" className="flex items-center space-x-2">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src={logo} 
-              alt="logo" 
-              className="w-12 h-12 rounded-xl object-cover" // Reduced size slightly for better Navbar fit
+              alt="Chorcha Logo" 
+              className="w-10 h-10 rounded-lg object-cover"
             />
-          </a>
+            <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span>
+          </Link>
 
-          {/* 2. Desktop Menu Links */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            {/* Primary navigation links */}
-            <div className="flex items-center gap-6 lg:gap-8">
-              {primaryLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="hover:text-green-400 transition-colors cursor-pointer font-medium border-b border-transparent hover:border-green-400 pb-1"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-            
-            {/* Separator for page links */}
-            <div className="h-6 w-px bg-gray-600"></div>
-            
-            {/* Page navigation links */}
-            <div className="flex items-center gap-4">
-              {pageLinks.map((link) => (
+          {/* Desktop Menu Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {mainLinks.map((link) => (
+              link.href.startsWith('/') ? (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="hover:text-green-400 transition-colors font-medium border-b border-transparent hover:border-green-400 pb-1"
+                  className="hover:text-green-600 transition-colors font-medium px-1 py-2"
                 >
                   {link.name}
                 </Link>
-              ))}
-            </div>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="hover:text-green-600 transition-colors font-medium px-1 py-2 cursor-pointer"
+                >
+                  {link.name}
+                </a>
+              )
+            ))}
           </div>
 
-          {/* 3. Desktop Button & Mobile Menu Button */}
-          <div className="flex items-center gap-4">
-            {/* Desktop Button */}
-            <button className="bg-green-600 hover:bg-green-700 py-2 px-4 rounded transition-colors text-white font-medium whitespace-nowrap">
-              সাইন আপ করো
-            </button>
-            
-            {/* Mobile Menu Icon (Hamburger/Close) */}
-            <button 
-              className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
+          {/* Desktop Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link 
+              to="/login" 
+              className="text-gray-700 hover:text-green-600 font-medium transition-colors px-3 py-2"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+              লগ ইন
+            </Link>
+            <Link 
+              to="/signup" 
+              className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+            >
+              সাইন আপ
+            </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-gray-100 transition-colors"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
-      {/* 4. Mobile Menu (Visible when isOpen is true) */}
+      {/* Mobile Menu */}
       <div 
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[500px]' : 'max-h-0'
-        } bg-gray-800 border-t border-gray-700`}
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        } bg-white border-t border-gray-200`}
       >
-        <div className="flex flex-col px-4 py-4 space-y-1">
-          <div className="mb-3">
-            <h3 className="text-xs uppercase font-semibold text-gray-400 mb-2">ফিচারসমূহ</h3>
-            {primaryLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
-                onClick={toggleMenu}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-          
-          <div>
-            <h3 className="text-xs uppercase font-semibold text-gray-400 mb-2">পেজসমূহ</h3>
-            {pageLinks.map((link) => (
+        <div className="px-4 py-3 space-y-1">
+          {mainLinks.map((link) => (
+            link.href.startsWith('/') ? (
               <Link
                 key={link.name}
                 to={link.href}
-                className="block py-2 text-base hover:bg-gray-700 rounded-md px-2 transition-colors"
+                className="block py-3 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md px-3 transition-colors"
                 onClick={toggleMenu}
               >
                 {link.name}
               </Link>
-            ))}
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block py-3 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md px-3 transition-colors cursor-pointer"
+                onClick={toggleMenu}
+              >
+                {link.name}
+              </a>
+            )
+          ))}
+          
+          {/* Mobile Auth Buttons */}
+          <div className="pt-3 border-t border-gray-200 mt-3">
+            <Link 
+              to="/login" 
+              className="block w-full text-center py-2 text-gray-700 hover:text-green-600 font-medium mb-2"
+              onClick={toggleMenu}
+            >
+              লগ ইন
+            </Link>
+            <Link 
+              to="/signup" 
+              className="block w-full text-center py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg"
+              onClick={toggleMenu}
+            >
+              সাইন আপ
+            </Link>
           </div>
         </div>
       </div>
