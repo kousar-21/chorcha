@@ -5,20 +5,74 @@ import logo from "../assets/download.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
 
   // Toggle function for the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Main navigation links - essential pages only
-  const mainLinks = [
+  const toggleDropdown = (index) => {
+    setDropdownOpen(dropdownOpen === index ? null : index);
+  };
+
+  // Navigation categories for premium organization
+  const navigationCategories = [
+    {
+      name: "প্রধান",
+      items: [
+        { name: "হোম", href: "/" },
+        { name: "ফিচারসমূহ", href: "#features" },
+      ]
+    },
+    {
+      name: "পরিষেবা",
+      items: [
+        { name: "সেবাসমূহ", href: "/services" },
+        { name: "মূল্য নির্ধারণ", href: "/pricing" },
+        { name: "ছাড়", href: "/discount" },
+        { name: "অফার", href: "/offer" },
+      ]
+    },
+    {
+      name: "আমাদের সম্পর্কে",
+      items: [
+        { name: "আমাদের সম্পর্কে", href: "/about" },
+        { name: "চর্চার শুরু", href: "/chorchastart" },
+        { name: "প্রতিক্রিয়া", href: "/testimonials" },
+      ]
+    },
+    {
+      name: "সাপোর্ট",
+      items: [
+        { name: "যোগাযোগ", href: "/contact" },
+        { name: "প্রযুক্তি", href: "/tech" },
+      ]
+    },
+    {
+      name: "অতিরিক্ত",
+      items: [
+        { name: "ব্লগ", href: "/blog" },
+        { name: "খেলার সুযোগ", href: "/gameopportunity" },
+      ]
+    }
+  ];
+  
+  // All pages for comprehensive navigation
+  const allPages = [
     { name: "হোম", href: "/" },
     { name: "ফিচারসমূহ", href: "#features" },
     { name: "আমাদের সম্পর্কে", href: "/about" },
+    { name: "চর্চার শুরু", href: "/chorchastart" },
     { name: "সেবাসমূহ", href: "/services" },
     { name: "মূল্য নির্ধারণ", href: "/pricing" },
+    { name: "ছাড়", href: "/discount" },
+    { name: "অফার", href: "/offer" },
     { name: "যোগাযোগ", href: "/contact" },
+    { name: "প্রতিক্রিয়া", href: "/testimonials" },
+    { name: "ব্লগ", href: "/blog" },
+    { name: "প্রযুক্তি", href: "/tech" },
+    { name: "খেলার সুযোগ", href: "/gameopportunity" },
   ];
 
   return (
@@ -36,14 +90,64 @@ const Navbar = () => {
             <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span>
           </Link>
 
-          {/* Desktop Menu Links */}
-          <div className="hidden md:flex items-center gap-8">
-            {mainLinks.map((link) => (
+          {/* Desktop Menu with Dropdowns */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navigationCategories.map((category, index) => (
+              <div 
+                key={category.name}
+                className="relative group"
+                onMouseEnter={() => setDropdownOpen(index)}
+                onMouseLeave={() => setDropdownOpen(null)}
+              >
+                <button 
+                  className="flex items-center space-x-1 hover:text-green-600 transition-colors font-medium"
+                  onClick={() => toggleDropdown(index)}
+                >
+                  <span>{category.name}</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                <div 
+                  className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
+                    dropdownOpen === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'
+                  }`}
+                >
+                  <div className="py-2">
+                    {category.items.map((item) => (
+                      item.href.startsWith('/') ? (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                        >
+                          {item.name}
+                        </a>
+                      )
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Compact Desktop Menu for Medium Screens */}
+          <div className="hidden md:flex lg:hidden items-center gap-4">
+            {allPages.slice(0, 5).map((link) => (
               link.href.startsWith('/') ? (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="hover:text-green-600 transition-colors font-medium px-1 py-2"
+                  className="hover:text-green-600 transition-colors font-medium text-sm px-2 py-1"
                 >
                   {link.name}
                 </Link>
@@ -51,7 +155,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="hover:text-green-600 transition-colors font-medium px-1 py-2 cursor-pointer"
+                  className="hover:text-green-600 transition-colors font-medium text-sm px-2 py-1 cursor-pointer"
                 >
                   {link.name}
                 </a>
@@ -69,7 +173,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/signup" 
-              className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
             >
               সাইন আপ
             </Link>
@@ -89,17 +193,17 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div 
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         } bg-white border-t border-gray-200`}
       >
         <div className="px-4 py-3 space-y-1">
-          {mainLinks.map((link) => (
+          {allPages.map((link) => (
             link.href.startsWith('/') ? (
               <Link
                 key={link.name}
                 to={link.href}
                 className="block py-3 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md px-3 transition-colors"
-                onClick={toggleMenu}
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
@@ -108,7 +212,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className="block py-3 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md px-3 transition-colors cursor-pointer"
-                onClick={toggleMenu}
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </a>
@@ -120,14 +224,14 @@ const Navbar = () => {
             <Link 
               to="/login" 
               className="block w-full text-center py-2 text-gray-700 hover:text-green-600 font-medium mb-2"
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(false)}
             >
               লগ ইন
             </Link>
             <Link 
               to="/signup" 
-              className="block w-full text-center py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg"
-              onClick={toggleMenu}
+              className="block w-full text-center py-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-sm"
+              onClick={() => setIsOpen(false)}
             >
               সাইন আপ
             </Link>
