@@ -175,7 +175,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/signup" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
+                className="bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
               >
                 সাইন আপ
               </Link>
@@ -201,7 +201,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className="flex-shrink-0 px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-colors whitespace-nowrap"
+                className="flex px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-colors whitespace-nowrap"
               >
                 {link.name}
               </Link>
@@ -209,7 +209,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="flex-shrink-0 px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-colors whitespace-nowrap cursor-pointer"
+                className="flex px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-colors whitespace-nowrap cursor-pointer"
               >
                 {link.name}
               </a>
@@ -284,7 +284,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/signup" 
-                className="block w-full text-center py-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-sm"
+                className="block w-full text-center py-2 bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-sm"
                 onClick={() => setIsOpen(false)}
               >
                 সাইন আপ
