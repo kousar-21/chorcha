@@ -223,7 +223,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className="nav-item flex-shrink-0 px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2"
+                className="nav-item px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2"
               >
                 {link.name}
               </Link>
@@ -231,7 +231,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-item flex-shrink-0 px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2 cursor-pointer"
+                className="nav-item px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2 cursor-pointer"
               >
                 {link.name}
               </a>
