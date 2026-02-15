@@ -64,7 +64,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-4">
       <div className="max-w-4xl w-full grid md:grid-cols-2 gap-8 items-center">
         
         {/* Left Side - Animation */}
@@ -149,7 +149,7 @@ const SignIn = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+              className="w-full bg-linear-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center">
@@ -164,9 +164,9 @@ const SignIn = () => {
 
           {/* Divider */}
           <div className="my-8 flex items-center">
-            <div className="flex-grow border-t border-gray-300"></div>
+            <div className="grow border-t border-gray-300"></div>
             <span className="mx-4 text-gray-500 text-sm">অথবা</span>
-            <div className="flex-grow border-t border-gray-300"></div>
+            <div className="grow border-t border-gray-300"></div>
           </div>
 
           {/* Social Login Options */}
