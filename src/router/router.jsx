@@ -12,6 +12,7 @@ import Discount from "../Pages/Discount";
 import Offer from "../Pages/Offer";
 import ChorchaStart from "../Pages/ChorchaStart";
 import GameOpportunity from "../Pages/GameOpportunity";
+import SignIn from "../Pages/SignIn";
 
 export const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
       {
         path: "/gameopportunity",
         element: <GameOpportunity></GameOpportunity>
+      },
+      {
+        path: "/signin",
+        element: <SignIn></SignIn>
       }
     ]
   },
