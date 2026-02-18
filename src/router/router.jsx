@@ -13,12 +13,14 @@ import Offer from "../Pages/Offer";
 import ChorchaStart from "../Pages/ChorchaStart";
 import GameOpportunity from "../Pages/GameOpportunity";
 import SignIn from "../Pages/SignIn";
+// Import the new SignUp component
+import SignUp from "../Pages/SignUp"; 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    children:[
+    children: [
       {
         path: "/",
         element: <Home></Home>,
@@ -70,6 +72,11 @@ export const router = createBrowserRouter([
       {
         path: "/signin",
         element: <SignIn></SignIn>
+      },
+      // Added SignUp Route
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>
       }
     ]
   },
