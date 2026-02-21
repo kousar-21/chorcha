@@ -168,7 +168,7 @@ const Navbar = () => {
             {/* Desktop Buttons */}
             <div className="hidden md:flex items-center gap-3">
               <Link 
-                to="/login" 
+                to="/signin" 
                 className="text-gray-700 hover:text-green-600 font-medium transition-colors px-3 py-2"
               >
                 লগ ইন
