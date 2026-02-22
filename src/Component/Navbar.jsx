@@ -89,7 +89,7 @@ const Navbar = () => {
                 alt="Chorcha Logo" 
                 className="w-10 h-10 rounded-lg object-cover"
               />
-              <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span>
+              {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span> */}
             </Link>
 
             {/* Desktop Menu with Dropdowns */}
