@@ -15,6 +15,7 @@ import GameOpportunity from "../Pages/GameOpportunity";
 import SignIn from "../Pages/SignIn";
 // Import the new SignUp component
 import SignUp from "../Pages/SignUp"; 
+import FAQ from "../Pages/FAQ";
 
 export const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>
       }
     ]
   },
