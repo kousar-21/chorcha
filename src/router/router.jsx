@@ -16,6 +16,7 @@ import SignIn from "../Pages/SignIn";
 // Import the new SignUp component
 import SignUp from "../Pages/SignUp"; 
 import FAQ from "../Pages/FAQ";
+import Careers from "../Pages/Careers";
 
 export const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ></FAQ>
+      },
+      {
+        path: "/careers",
+        element: <Careers></Careers>
       }
     ]
   },
