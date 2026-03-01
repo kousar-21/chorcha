@@ -17,6 +17,7 @@ import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp"; 
 import FAQ from "../Pages/FAQ";
 import Careers from "../Pages/Careers";
+import OurTeam from "../Pages/OurTeam";
 
 export const router = createBrowserRouter([
   {
@@ -87,6 +88,11 @@ export const router = createBrowserRouter([
       {
         path: "/careers",
         element: <Careers></Careers>
+      },
+      {
+        path: "/team",
+        element: <OurTeam></OurTeam>
+
       }
     ]
   },
