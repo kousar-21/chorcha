@@ -1,6 +1,7 @@
 import React from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import teamAnimation from '../assets/our-team.json'
 import { Link } from 'react-router';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const OurTeam = () => {
   const teamMembers = [
@@ -51,11 +52,10 @@ const OurTeam = () => {
             আমরা শুধু একটি প্লাটফর্ম নই, আমরা একদল স্বপ্নবাজ যারা বাংলাদেশের শিক্ষা ব্যবস্থায় ডিজিটাল বিপ্লব আনতে কাজ করছি।
           </p>
           
-          <div className="w-64 h-64 mx-auto mt-8">
+          <div className="w-96 h-96 mx-auto mt-8">
             <Player
               autoplay
-              loop
-              src="https://assets10.lottiefiles.com/packages/lf20_at6p77j3.json"
+              src={teamAnimation}
               style={{ height: '100%', width: '100%' }}
             />
           </div>
