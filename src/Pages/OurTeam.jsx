@@ -40,13 +40,13 @@ const OurTeam = () => {
       {/* FIXED HEADER: Used 'bg-gradient-to-b' (Standard Tailwind) 
           Added pt-24 if you have a fixed navbar 
       */}
-      <section className="bg-gradient-to-b from-blue-50 via-indigo-50 to-white py-20 px-4 pt-28">
+      <section className="bg-Linear-to-b from-blue-50 via-indigo-50 to-white py-20 px-4 pt-28">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-100 rounded-full">
             আমাদের পরিবার
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            চর্চা-র পেছনের <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">কারিগররা</span>
+            চর্চা-র পেছনের <span className="text-transparent bg-clip-text bg-Linear-to-r from-blue-600 to-green-500">কারিগররা</span>
           </h1>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             আমরা শুধু একটি প্লাটফর্ম নই, আমরা একদল স্বপ্নবাজ যারা বাংলাদেশের শিক্ষা ব্যবস্থায় ডিজিটাল বিপ্লব আনতে কাজ করছি।
@@ -105,7 +105,7 @@ const OurTeam = () => {
                   alt={member.name} 
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-8">
+                <div className="absolute inset-0 bg-Linear-to-t from-blue-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-8">
                    <div className="flex gap-4">
                       {/* Using text for icons to avoid extra library dependencies */}
                       <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-blue-600 transition-colors">in</a>
