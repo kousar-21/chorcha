@@ -42,7 +42,7 @@ const HelpPage = () => {
           <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
             আমরা কিভাবে আপনাকে সাহায্য করতে পারি?
           </h1>
-          
+
           <div className="relative max-w-2xl mx-auto">
             <input
               type="text"
@@ -55,7 +55,7 @@ const HelpPage = () => {
               খুঁজুন
             </button>
           </div>
-          
+
           <p className="mt-6 text-blue-100 opacity-80">
             জনপ্রিয় টপিক: <span className="underline cursor-pointer">পেমেন্ট সমস্যা</span>, <span className="underline cursor-pointer">সার্টিফিকেট</span>, <span className="underline cursor-pointer">কোর্স এক্সেস</span>
           </p>
@@ -91,7 +91,7 @@ const HelpPage = () => {
             <p className="text-gray-600 mb-8 leading-relaxed">
               আমাদের কাস্টমার সাপোর্ট টিম সপ্তাহে ৭ দিন, ২৪ ঘণ্টা আপনার সহায়তায় নিয়োজিত। সরাসরি কথা বলতে নিচের মাধ্যমগুলো ব্যবহার করুন।
             </p>
-            
+
             <div className="space-y-4">
               <div className="flex items-center p-4 bg-blue-50 rounded-2xl border border-blue-100">
                 <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white mr-4">✉️</div>
@@ -100,7 +100,7 @@ const HelpPage = () => {
                   <p className="font-bold text-gray-900">support@chorcha.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center p-4 bg-green-50 rounded-2xl border border-green-100">
                 <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center text-white mr-4">📞</div>
                 <div>
@@ -110,7 +110,7 @@ const HelpPage = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="md:w-1/2 bg-blue-50 flex items-center justify-center p-12 order-1 md:order-2">
             <Player
               autoplay
@@ -125,7 +125,7 @@ const HelpPage = () => {
       {/* Footer Note */}
       <footer className="py-12 text-center text-gray-400 text-sm">
         <p>© ২০২৬ চর্চা লার্নিং প্লাটফর্ম। সকল অধিকার সংরক্ষিত।</p>
-      </div>
+      </footer>
     </div>
   );
 };
