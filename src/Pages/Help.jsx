@@ -37,7 +37,7 @@ const HelpPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Search Section */}
-      <section className="bg-gradient-to-r from-blue-700 to-indigo-800 pt-32 pb-20 px-4 text-center">
+      <section className="bg-linear-to-r from-blue-700 to-indigo-800 pt-32 pb-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
             আমরা কিভাবে আপনাকে সাহায্য করতে পারি?
@@ -127,6 +127,7 @@ const HelpPage = () => {
         <p>© ২০২৬ চর্চা লার্নিং প্লাটফর্ম। সকল অধিকার সংরক্ষিত।</p>
       </footer>
     </div>
+
   );
 };
 
