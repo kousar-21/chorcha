@@ -18,6 +18,7 @@ import SignUp from "../Pages/SignUp";
 import FAQ from "../Pages/FAQ";
 import Careers from "../Pages/Careers";
 import OurTeam from "../Pages/OurTeam";
+import HelpPage from "../Pages/Help";
 
 export const router = createBrowserRouter([
   {
@@ -92,6 +93,11 @@ export const router = createBrowserRouter([
       {
         path: "/team",
         element: <OurTeam></OurTeam>
+
+      },
+      {
+        path: "/help",
+        element: <HelpPage></HelpPage>
 
       }
     ]
