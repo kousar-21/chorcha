@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { Link } from 'react-router';
 // Import your local help animation if you have one
-// import helpAnimation from '../assets/help-animation.json';
+import helpAnimation from '../assets/Call Center Support Lottie Animation.json';
 
 const HelpPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,7 +42,13 @@ const HelpPage = () => {
           <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
             আমরা কিভাবে আপনাকে সাহায্য করতে পারি?
           </h1>
-
+          <div className="w-96 h-96 mx-auto mt-8">
+            <Player
+              autoplay
+              src={helpAnimation}
+              style={{ height: '100%', width: '100%' }}
+            />
+          </div>
           <div className="relative max-w-2xl mx-auto">
             <input
               type="text"
