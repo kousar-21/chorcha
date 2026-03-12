@@ -45,15 +45,16 @@ const HelpPage = () => {
           <div className="w-96 h-96 mx-auto mt-8">
             <Player
               autoplay
+              loop
               src={helpAnimation}
               style={{ height: '100%', width: '100%' }}
             />
           </div>
-          <div className="relative max-w-2xl mx-auto">
+          <div className="relative max-w-2xl mx-auto border border-gray-300 rounded-2xl shadow-2xl">
             <input
               type="text"
               placeholder="আপনার সমস্যার কথা লিখুন (যেমন: পাসওয়ার্ড পরিবর্তন)..."
-              className="w-full px-6 py-4 rounded-2xl shadow-2xl focus:ring-4 focus:ring-blue-300 outline-none text-gray-800 text-lg"
+              className="w-full px-6 py-4 rounded-2xl shadow-2xl focus:ring-4 focus:ring-blue-200 outline-none text-gray-200 text-lg"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
