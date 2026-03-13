@@ -3,6 +3,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import { Link } from 'react-router';
 // Import your local help animation if you have one
 import helpAnimation from '../assets/Call Center Support Lottie Animation.json';
+import techAnimation from '../assets/TechCustomer Support.json';
 
 const HelpPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -122,7 +123,7 @@ const HelpPage = () => {
             <Player
               autoplay
               loop
-              src="https://lottie.host/6f9064f7-920b-402c-9686-302340325492/68v4A6kP6L.json"
+              src={techAnimation}
               style={{ height: '350px', width: '350px' }}
             />
           </div>
