@@ -55,6 +55,7 @@ const OurTeam = () => {
           <div className="w-96 h-96 mx-auto mt-8">
             <Player
               autoplay
+              loop
               src={teamAnimation}
               style={{ height: '100%', width: '100%' }}
             />
