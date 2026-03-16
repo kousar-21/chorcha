@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import questionAnimation from "../assets/TechCustomer Support.json"
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -53,11 +54,11 @@ const FAQ = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white pt-28 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="w-48 h-48 mx-auto mb-6">
+          <div className="w-80 h-80 mx-auto mb-2">
             <Player
               autoplay
               loop
-              src="https://assets8.lottiefiles.com/packages/lf20_ssu9WJ.json"
+              src={questionAnimation}
               style={{ height: '100%', width: '100%' }}
             />
           </div>
