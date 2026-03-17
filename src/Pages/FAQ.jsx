@@ -52,7 +52,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gray-50/50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-white pt-28 pb-16 px-4">
+      <section className="bg-linear-to-b from-blue-50 to-white pt-28 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-80 h-80 mx-auto mb-2">
             <Player
