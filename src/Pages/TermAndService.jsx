@@ -70,7 +70,7 @@ const TermsAndService = () => {
         </aside>
 
         {/* Content Area */}
-        <main className="md:w-3/4 bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100">
+        <main className="md:w-3/4 bg-white rounded-4xl p-8 md:p-12 shadow-sm border border-gray-100">
           
           <div id="introduction" className="mb-16 scroll-mt-28">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
