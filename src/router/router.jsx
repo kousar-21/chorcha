@@ -19,6 +19,7 @@ import FAQ from "../Pages/FAQ";
 import Careers from "../Pages/Careers";
 import OurTeam from "../Pages/OurTeam";
 import HelpPage from "../Pages/Help";
+import TermsAndService from "../Pages/TermAndService";
 
 export const router = createBrowserRouter([
   {
@@ -99,7 +100,12 @@ export const router = createBrowserRouter([
         path: "/help",
         element: <HelpPage></HelpPage>
 
-      }
+      },
+      {
+        path: "/terms",
+        element: <TermsAndService></TermsAndService>
+
+      },
     ]
   },
 ]);
