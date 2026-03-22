@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { Link } from 'react-router';
+import termAnimation from "../assets/Product with Product Services.json"
 
 const TermsAndService = () => {
   const [activeSection, setActiveSection] = useState("introduction");
@@ -39,7 +40,7 @@ const TermsAndService = () => {
             <Player
               autoplay
               loop
-              src="https://lottie.host/9769351e-670d-4050-9856-787140f0037e/9I6fL3Yj2D.json"
+              src={termAnimation}
               style={{ height: '100%', width: '100%' }}
             />
           </div>
