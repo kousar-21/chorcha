@@ -106,6 +106,11 @@ export const router = createBrowserRouter([
         element: <TermsAndService></TermsAndService>
 
       },
+      {
+        path: "/privacy",
+        element: <PrivacyPolicy></PrivacyPolicy>
+
+      },
     ]
   },
 ]);
