@@ -20,6 +20,7 @@ import Careers from "../Pages/Careers";
 import OurTeam from "../Pages/OurTeam";
 import HelpPage from "../Pages/Help";
 import TermsAndService from "../Pages/TermAndService";
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
 
 export const router = createBrowserRouter([
   {
