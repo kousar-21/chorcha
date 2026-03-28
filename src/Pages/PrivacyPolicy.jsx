@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০১.</span> আমরা কি কি তথ্য সংগ্রহ করি?
             </h2>
-            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-slate-600 leading-relaxed space-y-4">
+            <div className="bg-white p-8 rounded-4xl border border-slate-100 shadow-sm text-slate-600 leading-relaxed space-y-4">
               <p>আমরা মূলত দুই ধরণের তথ্য সংগ্রহ করি:</p>
               <ul className="list-disc ml-6 space-y-2">
                 <li><strong>সরাসরি তথ্য:</strong> নাম, ইমেইল এড্রেস, ফোন নম্বর এবং প্রোফাইল ছবি যা আপনি অ্যাকাউন্ট খোলার সময় প্রদান করেন।</li>
