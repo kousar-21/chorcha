@@ -84,7 +84,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০২.</span> তথ্যের ব্যবহার ও উদ্দেশ্য
             </h2>
-            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-slate-600 leading-relaxed space-y-4">
+            <div className="bg-white p-8 rounded-4xl border border-slate-100 shadow-sm text-slate-600 leading-relaxed space-y-4">
               <p>সংগৃহীত তথ্যগুলো আমরা নিচের কাজগুলোতে ব্যবহার করি:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <div className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50 italic text-sm">আপনার লার্নিং ড্যাশবোর্ড আপডেট রাখা।</div>
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০৩.</span> কুকিজ পলিসি
             </h2>
-            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-slate-600 leading-relaxed">
+            <div className="bg-white p-8 rounded-4xl border border-slate-100 shadow-sm text-slate-600 leading-relaxed">
               <p>চর্চা-র ওয়েবসাইট উন্নত ব্রাউজিং অভিজ্ঞতার জন্য 'কুকিজ' ফাইল ব্যবহার করে। আপনি আপনার ব্রাউজার সেটিংস থেকে কুকিজ বন্ধ করতে পারেন, তবে এতে সাইটের কিছু ফিচার সঠিকভাবে কাজ নাও করতে পারে।</p>
             </div>
           </section>
@@ -110,7 +110,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০৪.</span> ডাটা নিরাপত্তা ব্যবস্থা
             </h2>
-            <div className="bg-blue-600 p-8 rounded-[2rem] text-white shadow-xl shadow-blue-200">
+            <div className="bg-blue-600 p-8 rounded-4xl text-white shadow-xl shadow-blue-200">
               <p className="leading-relaxed opacity-90">
                 আমরা আপনার ডাটা সুরক্ষায় SSL এনক্রিপশন এবং ফায়ারওয়াল প্রযুক্তি ব্যবহার করি। আপনার পাসওয়ার্ড এবং পেমেন্ট গেটওয়ে ডাটা সম্পূর্ণ এনক্রিপ্টেড অবস্থায় থাকে, যা কোনো মানুষের পক্ষে পড়া সম্ভব নয়।
               </p>
@@ -122,7 +122,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০৫.</span> থার্ড-পার্টি ডিসক্লোজার
             </h2>
-            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-slate-600 leading-relaxed">
+            <div className="bg-white p-8 rounded-4xl border border-slate-100 shadow-sm text-slate-600 leading-relaxed">
               <p>আমরা আপনার ব্যক্তিগত তথ্য বাইরের কোনো প্রতিষ্ঠানের কাছে বিক্রি বা বিনিময় করি না। তবে পেমেন্ট প্রসেসর (যেমন: SSLCommerz) এবং ইমেইল ডেলিভারি সেবার ক্ষেত্রে প্রয়োজনীয় তথ্য শেয়ার করা হতে পারে যা কঠোর গোপনীয়তার সাথে পরিচালিত হয়।</p>
             </div>
           </section>
@@ -132,7 +132,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০৬.</span> শিশুদের গোপনীয়তা (Children's Privacy)
             </h2>
-            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-slate-600 leading-relaxed">
+            <div className="bg-white p-8 rounded-4xl border border-slate-100 shadow-sm text-slate-600 leading-relaxed">
               <p>আমাদের প্ল্যাটফর্ম মূলত ১৩ বছরের উর্ধ্বে শিক্ষার্থীদের জন্য। আমরা জেনেশুনে ১৩ বছরের নিচের শিশুদের কোনো তথ্য সংগ্রহ করি না। যদি আপনি অভিভাবক হিসেবে জানতে পারেন আপনার সন্তান আমাদের তথ্য দিয়েছে, তবে আমাদের সাথে যোগাযোগ করুন; আমরা তা দ্রুত মুছে দেব।</p>
             </div>
           </section>
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="text-blue-600 mr-3">০৭.</span> আপনার আইনি অধিকার ও নিয়ন্ত্রণ
             </h2>
-            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-slate-600 space-y-4">
+            <div className="bg-white p-8 rounded-4xl border border-slate-100 shadow-sm text-slate-600 space-y-4">
               <p>আপনার ব্যক্তিগত তথ্যের উপর আপনার পূর্ণ নিয়ন্ত্রণ রয়েছে। আপনি যেকোনো সময়:</p>
               <ul className="space-y-3 font-medium text-slate-800">
                 <li className="flex items-center"><span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span> আপনার প্রোফাইল তথ্য এডিট করতে পারেন।</li>
