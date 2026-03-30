@@ -1,5 +1,6 @@
 import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import privacyAnimation from "../assets/Privacy Policy.json"
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -36,7 +37,7 @@ const PrivacyPolicy = () => {
             <Player
               autoplay
               loop
-              src="https://lottie.host/80644485-64d4-4632-835d-209489f07474/eGjLpS5T0U.json"
+              src={privacyAnimation}
               style={{ height: '100%', width: '100%' }}
             />
           </div>
