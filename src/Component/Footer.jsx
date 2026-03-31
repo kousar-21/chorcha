@@ -100,13 +100,13 @@ const Footer = () => {
             <form className="flex">
               <input 
                 type="email" 
-                placeholder="Your email address" 
-                className="w-full px-4 py-2 text-sm text-gray-900 rounded-l-lg border-none focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+                placeholder="Your email Address" 
+                className="w-3/4 px-4 py-2 text-xs bg-white text-gray-900 rounded-l-lg border-none focus:ring-2 focus:ring-indigo-400 focus:outline-none"
                 aria-label="Email for newsletter"
               />
               <button 
                 type="submit"
-                className="bg-indigo-600 text-white px-4 py-2 text-sm font-medium rounded-r-lg hover:bg-indigo-700 transition duration-200 disabled:opacity-50 flex items-center"
+                className="bg-indigo-600 text-white px-4 py-2 text-xs font-medium rounded-r-lg hover:bg-indigo-700 transition duration-200 disabled:opacity-50 flex items-center"
               >
                 <FaEnvelope className="mr-1 h-4 w-4" /> Sign Up
               </button>
