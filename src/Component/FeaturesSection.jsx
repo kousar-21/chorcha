@@ -36,18 +36,18 @@ const FeaturesSection = () => {
 
     return (
         // Changed background to subtle gray for separation
-        <section className="py-20 sm:py-24 bg-gray-50"> 
+        <section className="py-20 sm:py-24 bg-[var(--bg-secondary)] transition-colors duration-300"> 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <span className="text-base font-semibold text-indigo-600 uppercase tracking-widest">
+                    <span className="text-base font-semibold text-[var(--color-primary)] uppercase tracking-widest">
                         Core Competencies
                     </span>
-                    <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+                    <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-5xl">
                         Solutions Engineered for Modern Growth
                     </h2>
-                    <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-600">
+                    <p className="mt-4 max-w-3xl mx-auto text-xl text-[var(--text-tertiary)]">
                         We blend creative strategy with cutting-edge engineering to build products that are scalable, delightful, and deliver measurable results.
                     </p>
                 </div>
@@ -58,19 +58,19 @@ const FeaturesSection = () => {
                         <div 
                             key={index} 
                             // Individual card styling with dynamic hover effect
-                            className={`group p-8 rounded-xl shadow-lg border border-gray-200 h-full transition-all duration-300 hover:shadow-2xl ${feature.bgColor} hover:border-transparent`}
+                            className={`group p-8 rounded-xl shadow-lg border border-[var(--border-color)] h-full transition-all duration-300 hover:shadow-2xl ${feature.bgColor} hover:border-transparent`}
                         >
                             <div className="flex items-center justify-start">
                                 {/* Icon Styling: Uses feature.color */}
-                                <div className={`flex items-center justify-center h-14 w-14 rounded-full ${feature.color} bg-white shadow-xl ring-4 ring-white`}>
+                                <div className={`flex items-center justify-center h-14 w-14 rounded-full ${feature.color} bg-[var(--bg-primary)] shadow-xl ring-4 ring-[var(--bg-primary)]`}>
                                     <feature.icon className="h-7 w-7" />
                                 </div>
                             </div>
                             
-                            <h3 className="mt-6 text-2xl font-bold tracking-tight text-gray-900">
+                            <h3 className="mt-6 text-2xl font-bold tracking-tight text-[var(--text-primary)]">
                                 {feature.title}
                             </h3>
-                            <p className="mt-3 text-base text-gray-700">
+                            <p className="mt-3 text-base text-[var(--text-secondary)]">
                                 {feature.description}
                             </p>
                             
@@ -87,10 +87,10 @@ const FeaturesSection = () => {
 
                 {/* Stronger, More Direct CTA */}
                 <div className="mt-16 text-center">
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-6">Ready to see our work in action?</h3>
+                    <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6">Ready to see our work in action?</h3>
                     <a 
                         href="/portfolio" 
-                        className="inline-flex items-center justify-center px-10 py-4 border-2 border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+                        className="inline-flex items-center justify-center px-10 py-4 border-2 border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary-light)] transition duration-300 transform hover:scale-105"
                     >
                         <FaBookOpen className="mr-3 h-5 w-5" />
                         View Our Portfolio

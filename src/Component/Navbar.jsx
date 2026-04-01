@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../assets/download.png";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +79,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navigation - Hidden on mobile */}
-      <nav className="hidden md:flex bg-white text-gray-800 text-sm sticky top-0 z-50 shadow-md border-b border-gray-200">
+      <nav className="hidden md:flex bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm sticky top-0 z-50 shadow-md border-b border-[var(--border-color)] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             
@@ -102,7 +103,7 @@ const Navbar = () => {
                   onMouseLeave={() => setDropdownOpen(null)}
                 >
                   <button 
-                    className="flex items-center space-x-1 hover:text-green-600 transition-colors font-medium"
+                    className="flex items-center space-x-1 hover:text-[var(--color-primary)] transition-colors font-medium"
                     onClick={() => toggleDropdown(index)}
                   >
                     <span>{category.name}</span>
@@ -122,7 +123,7 @@ const Navbar = () => {
                           <Link
                             key={item.name}
                             to={item.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                            className="block px-4 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--color-primary)] transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -130,7 +131,7 @@ const Navbar = () => {
                           <a
                             key={item.name}
                             href={item.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                            className="block px-4 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--color-primary)] transition-colors"
                           >
                             {item.name}
                           </a>
@@ -149,7 +150,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="hover:text-green-600 transition-colors font-medium text-sm px-2 py-1"
+                    className="hover:text-[var(--color-primary)] transition-colors font-medium text-sm px-2 py-1"
                   >
                     {link.name}
                   </Link>
@@ -169,23 +170,24 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-3">
               <Link 
                 to="/signin" 
-                className="text-gray-700 hover:text-green-600 font-medium transition-colors px-3 py-2"
+                className="text-[var(--text-secondary)] hover:text-[var(--color-primary)] font-medium transition-colors px-3 py-2"
               >
                 লগ ইন
               </Link>
               <Link 
                 to="/signup" 
-                className="bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
+                className="bg-linear-to-r from-[var(--color-primary)] to-[var(--color-secondary)] hover:from-[var(--color-primary-light)] hover:to-[var(--color-accent)] text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
               >
                 সাইন আপ
               </Link>
+              <ThemeToggle />
             </div>
           </div>
         </div>
       </nav>
 
       {/* Mobile Bottom Navigation - Enhanced Design */}
-      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-md bg-white/90 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-xl md:hidden z-50 animate-fade-in-up">
+      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-md bg-[var(--bg-primary)]/90 backdrop-blur-lg border border-[var(--border-color)] rounded-2xl shadow-xl md:hidden z-50 animate-fade-in-up transition-colors duration-300">
         <style jsx>{`
           @keyframes fade-in-up {
             from {
@@ -223,7 +225,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className="nav-item px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2"
+                className="nav-item px-3 py-2 text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2"
               >
                 {link.name}
               </Link>
@@ -231,7 +233,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-item px-3 py-2 text-xs font-medium text-gray-700 hover:text-green-600 transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2 cursor-pointer"
+                className="nav-item px-3 py-2 text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2 cursor-pointer"
               >
                 {link.name}
               </a>
@@ -241,7 +243,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Bar with Logo and Menu Button - Enhanced Design */}
-      <nav className="md:hidden bg-white/90 backdrop-blur-lg text-gray-800 text-sm sticky top-0 z-40 shadow-md border-b border-gray-200 animate-fade-in-down">
+      <nav className="md:hidden bg-[var(--bg-primary)]/90 backdrop-blur-lg text-[var(--text-primary)] text-sm sticky top-0 z-40 shadow-md border-b border-[var(--border-color)] animate-fade-in-down transition-colors duration-300">
         <style jsx>{`
           @keyframes fade-in-down {
             from {
@@ -268,12 +270,12 @@ const Navbar = () => {
                 alt="Chorcha Logo" 
                 className="w-8 h-8 rounded-lg object-cover shadow-sm"
               />
-              <span className="text-lg font-bold text-gray-900">চর্চা</span>
+              <span className="text-lg font-bold text-[var(--text-primary)]">চর্চা</span>
             </Link>
 
             {/* Mobile Menu Button */}
             <button 
-              className="p-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 active:scale-95"
+              className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--bg-tertiary)] transition-all duration-200 transform hover:scale-105 active:scale-95"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
@@ -286,7 +288,7 @@ const Navbar = () => {
         <div 
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
             isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-          } bg-white/95 backdrop-blur-lg border-t border-gray-200`}
+          } bg-[var(--bg-primary)]/95 backdrop-blur-lg border-t border-[var(--border-color)]`}
         >
           <div className="px-4 py-3 space-y-1">
             {allPages.map((link) => (
@@ -294,7 +296,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="block py-3 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1"
+                  className="block py-3 text-base font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--bg-tertiary)] rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -303,7 +305,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block py-3 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1 cursor-pointer"
+                  className="block py-3 text-base font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--bg-tertiary)] rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -312,21 +314,24 @@ const Navbar = () => {
             ))}
             
             {/* Mobile Auth Buttons */}
-            <div className="pt-3 border-t border-gray-200 mt-3">
+            <div className="pt-3 border-t border-[var(--border-color)] mt-3">
               <Link 
                 to="/login" 
-                className="block w-full text-center py-2 text-gray-700 hover:text-green-600 font-medium mb-2 transition-colors duration-200"
+                className="block w-full text-center py-2 text-[var(--text-secondary)] hover:text-[var(--color-primary)] font-medium mb-2 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 লগ ইন
               </Link>
               <Link 
                 to="/signup" 
-                className="block w-full text-center py-2 bg-linear-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-sm transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                className="block w-full text-center py-2 bg-linear-to-r from-[var(--color-primary)] to-[var(--color-secondary)] hover:from-[var(--color-primary-light)] hover:to-[var(--color-accent)] text-white font-medium rounded-lg shadow-sm transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
                 onClick={() => setIsOpen(false)}
               >
                 সাইন আপ
               </Link>
+              <div className="flex justify-center mt-3 pt-3 border-t border-[var(--border-color)]">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </div>

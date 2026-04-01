@@ -1,9 +1,12 @@
 import { RouterProvider } from "react-router";
 import { router } from "./router/router";
+import { ThemeProvider } from "./Shared/ThemeContext";
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

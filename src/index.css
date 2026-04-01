@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+/* Theme Colors based on ConnectivitySection */
+:root {
+  /* Light Mode Colors */
+  --color-primary: #4f46e5; /* indigo-600 */
+  --color-primary-light: #6366f1; /* indigo-500 */
+  --color-secondary: #06b6d4; /* cyan-500 */
+  --color-accent: #a855f7; /* purple-500 */
+  --color-gradient-from: #4f46e5; /* indigo-600 */
+  --color-gradient-via: #a855f7; /* purple-600 */
+  --color-gradient-to: #ec4899; /* pink-500 */
+  
+  /* Light Mode Background */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  
+  /* Light Mode Text */
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-tertiary: #6b7280;
+  
+  /* Light Mode Borders */
+  --border-color: #e5e7eb;
+  
+  /* Shadows */
+  --shadow-color: rgba(79, 70, 229, 0.1);
+}
+
+.dark {
+  /* Dark Mode Colors - Same vibrant theme */
+  --color-primary: #6366f1; /* indigo-500 - brighter for dark mode */
+  --color-primary-light: #818cf8; /* indigo-400 */
+  --color-secondary: #22d3ee; /* cyan-400 */
+  --color-accent: #c084fc; /* purple-400 */
+  --color-gradient-from: #6366f1; /* indigo-500 */
+  --color-gradient-via: #a855f7; /* purple-600 */
+  --color-gradient-to: #ec4899; /* pink-500 */
+  
+  /* Dark Mode Background */
+  --bg-primary: #111827; /* gray-900 */
+  --bg-secondary: #1f2937; /* gray-800 */
+  --bg-tertiary: #374151; /* gray-700 */
+  
+  /* Dark Mode Text */
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-tertiary: #9ca3af;
+  
+  /* Dark Mode Borders */
+  --border-color: #374151;
+  
+  /* Shadows */
+  --shadow-color: rgba(99, 102, 241, 0.2);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom utility classes for theme colors */
+.bg-theme-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-theme-gradient {
+  background: linear-gradient(to right, var(--color-gradient-from), var(--color-gradient-via), var(--color-gradient-to));
+}
+
+.text-theme-primary {
+  color: var(--color-primary);
+}
+
+.border-theme-primary {
+  border-color: var(--color-primary);
+}
+
+.shadow-theme {
+  box-shadow: 0 4px 14px var(--shadow-color);
+}

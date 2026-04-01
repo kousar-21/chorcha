@@ -6,11 +6,11 @@ import PlaystoreLogo from "../Shared/PlaystoreLogo";
 // Tailwind class constants for clean code
 const topSectionHeight = "h-[90vh]"; 
 const bottomSectionHeight = "h-[10vh]"; 
-const topSectionBg = "bg-gray-900";
+const topSectionBg = "bg-[var(--bg-primary)]";
 
-// Lighter vibrant colors for the bottom 10% section
+// Lighter vibrant colors for the bottom 10% section - using theme colors
 const horizontalGradient =
-  "from-purple-400 via-pink-400 via-green-400 via-sky-400 to-yellow-400";
+  "from-[var(--color-gradient-from)] via-[var(--color-gradient-via)] via-[var(--color-secondary)] via-[var(--color-accent)] to-[var(--color-gradient-to)]";
 
 const Hero = () => {
   // Use a single class for the responsive phone image to improve consistency and maintain aspect ratio
@@ -19,12 +19,12 @@ const Hero = () => {
 
   return (
     // Main container set to take full viewport height for 90/10 split to work
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden transition-colors duration-300">
       
-      {/* TOP — 90% Solid Background (bg-gray-900) */}
+      {/* TOP — 90% Solid Background */}
       <motion.div
         // Apply the 90% height and solid background
-        className={`w-full ${topSectionHeight} ${topSectionBg} text-white px-6 sm:px-12 md:px-20 lg:px-24 xl:px-60 py-12 flex items-center relative`}
+        className={`w-full ${topSectionHeight} ${topSectionBg} text-[var(--text-primary)] px-6 sm:px-12 md:px-20 lg:px-24 xl:px-60 py-12 flex items-center relative transition-colors duration-300`}
         transition={{
           duration: 8,
           repeat: Infinity,
@@ -40,7 +40,7 @@ const Hero = () => {
               চর্চা করো নিজের গতিতে
             </h1>
 
-            <p className="text-sm sm:text-base md:text-base text-gray-300">
+            <p className="text-sm sm:text-base md:text-base text-[var(--text-tertiary)]">
               সিলেবাসের যেকোন টপিক থেকে প্রশ্ন খুঁজে প্র্যাকটিস করো, AI দিয়ে{" "}
               <br className="hidden sm:inline" />
               ব্যাখ্যা বুঝে নাও, আর মক টেস্ট দিয়ে নিজের প্রস্তুতি মাপো।
@@ -48,7 +48,7 @@ const Hero = () => {
 
             <div className="flex flex-col items-center md:items-start gap-2 sm:gap-3 pt-4">
               <PlaystoreLogo />
-              <p className="text-xs sm:text-sm md:text-sm text-gray-300">
+              <p className="text-xs sm:text-sm md:text-sm text-[var(--text-tertiary)]">
                 100k+ downloads | ⭐ 4.6 Rating with over 8k Reviews
               </p>
             </div>
