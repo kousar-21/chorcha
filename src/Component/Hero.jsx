@@ -82,9 +82,9 @@ const Hero = () => {
       </motion.div>
 
       {/* BOTTOM — 10% Horizontal Vibrant Gradient (as base) */}
-      <div
+      {/* <div
         className={`w-full ${bottomSectionHeight} bg-linear-to-r ${horizontalGradient} relative z-20`} // z-20 keeps it above the fade
-      />
+      /> */}
     </div>
   );
 };
