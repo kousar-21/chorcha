@@ -88,7 +88,7 @@ const Navbar = () => {
               <img 
                 src={logo} 
                 alt="Chorcha Logo" 
-                className="w-10 h-10 rounded-lg object-cover"
+                className="w-10 h-10 rounded-lg object-cover pl-4"
               />
               {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span> */}
             </Link>
