@@ -84,11 +84,11 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-3 mr-6">
               <img 
                 src={logo} 
                 alt="Chorcha Logo" 
-                className="w-10 h-10 rounded-lg object-cover pl-4"
+                className="w-10 h-10 rounded-lg object-cover"
               />
               {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span> */}
             </Link>
