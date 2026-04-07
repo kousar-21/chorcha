@@ -80,7 +80,7 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* Main Large Feature Card (Occupies 2 columns on large screens) */}
-          <div className="lg:col-span-2 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-[3rem] p-10 md:p-14 text-white relative overflow-hidden group shadow-2xl shadow-blue-200">
+          <div className="lg:col-span-2 bg-Linear-to-br from-blue-600 to-indigo-800 rounded-[3rem] p-10 md:p-14 text-white relative overflow-hidden group shadow-2xl shadow-blue-200">
             <div className="relative z-10">
               <span className="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 inline-block">Premium Feature</span>
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{featureList[0].title}</h3>
