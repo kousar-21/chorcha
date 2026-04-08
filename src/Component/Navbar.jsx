@@ -79,7 +79,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navigation - Hidden on mobile */}
-      <nav className="hidden md:flex bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm sticky top-0 z-50 shadow-md border-b border-[var(--border-color)] transition-colors duration-300">
+      <nav className="hidden md:flex bg-(--bg-primary) text-(--text-primary) text-sm sticky top-0 z-50 shadow-md border-b border-(--border-color) transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             
@@ -103,7 +103,7 @@ const Navbar = () => {
                   onMouseLeave={() => setDropdownOpen(null)}
                 >
                   <button 
-                    className="flex items-center space-x-1 hover:text-[var(--color-primary)] transition-colors font-medium"
+                    className="flex items-center space-x-1 hover:text-(--color-primary) transition-colors font-medium"
                     onClick={() => toggleDropdown(index)}
                   >
                     <span>{category.name}</span>
@@ -123,7 +123,7 @@ const Navbar = () => {
                           <Link
                             key={item.name}
                             to={item.href}
-                            className="block px-4 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--color-primary)] transition-colors"
+                            className="block px-4 py-2 text-sm text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--color-primary) transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -131,7 +131,7 @@ const Navbar = () => {
                           <a
                             key={item.name}
                             href={item.href}
-                            className="block px-4 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--color-primary)] transition-colors"
+                            className="block px-4 py-2 text-sm text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--color-primary) transition-colors"
                           >
                             {item.name}
                           </a>
@@ -150,7 +150,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="hover:text-[var(--color-primary)] transition-colors font-medium text-sm px-2 py-1"
+                    className="hover:text-(--color-primary) transition-colors font-medium text-sm px-2 py-1"
                   >
                     {link.name}
                   </Link>
