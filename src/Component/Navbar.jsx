@@ -170,13 +170,13 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-3">
               <Link 
                 to="/signin" 
-                className="text-[var(--text-secondary)] hover:text-[var(--color-primary)] font-medium transition-colors px-3 py-2"
+                className="text-(--text-secondary) hover:text-(--color-primary) font-medium transition-colors px-3 py-2"
               >
                 লগ ইন
               </Link>
               <Link 
                 to="/signup" 
-                className="bg-linear-to-r from-[var(--color-primary)] to-[var(--color-secondary)] hover:from-[var(--color-primary-light)] hover:to-[var(--color-accent)] text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
+                className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) hover:from-(--color-primary-light) hover:to-(--color-accent) text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
               >
                 সাইন আপ
               </Link>
@@ -187,7 +187,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Bottom Navigation - Enhanced Design */}
-      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-md bg-[var(--bg-primary)]/90 backdrop-blur-lg border border-[var(--border-color)] rounded-2xl shadow-xl md:hidden z-50 animate-fade-in-up transition-colors duration-300">
+      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-md bg-(--bg-primary)/90 backdrop-blur-lg border border-(--border-color) rounded-2xl shadow-xl md:hidden z-50 animate-fade-in-up transition-colors duration-300">
         <style jsx>{`
           @keyframes fade-in-up {
             from {
@@ -225,7 +225,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className="nav-item px-3 py-2 text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2"
+                className="nav-item px-3 py-2 text-xs font-medium text-(--text-secondary) hover:text-(--color-primary) transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2"
               >
                 {link.name}
               </Link>
@@ -233,7 +233,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-item px-3 py-2 text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2 cursor-pointer"
+                className="nav-item px-3 py-2 text-xs font-medium text-(--text-secondary) hover:text-(--color-primary) transition-all duration-200 whitespace-nowrap mx-1 first:ml-2 last:mr-2 cursor-pointer"
               >
                 {link.name}
               </a>
@@ -243,7 +243,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Bar with Logo and Menu Button - Enhanced Design */}
-      <nav className="md:hidden bg-[var(--bg-primary)]/90 backdrop-blur-lg text-[var(--text-primary)] text-sm sticky top-0 z-40 shadow-md border-b border-[var(--border-color)] animate-fade-in-down transition-colors duration-300">
+      <nav className="md:hidden bg-(--bg-primary)/90 backdrop-blur-lg text-(--text-primary) text-sm sticky top-0 z-40 shadow-md border-b border-(--border-color) animate-fade-in-down transition-colors duration-300">
         <style jsx>{`
           @keyframes fade-in-down {
             from {
@@ -270,12 +270,12 @@ const Navbar = () => {
                 alt="Chorcha Logo" 
                 className="w-8 h-8 rounded-lg object-cover shadow-sm"
               />
-              <span className="text-lg font-bold text-[var(--text-primary)]">চর্চা</span>
+              <span className="text-lg font-bold text-(--text-primary)">চর্চা</span>
             </Link>
 
             {/* Mobile Menu Button */}
             <button 
-              className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--bg-tertiary)] transition-all duration-200 transform hover:scale-105 active:scale-95"
+              className="p-2 rounded-lg text-(--text-secondary) hover:text-(--color-primary) hover:bg-(--bg-tertiary) transition-all duration-200 transform hover:scale-105 active:scale-95"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
@@ -288,7 +288,7 @@ const Navbar = () => {
         <div 
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
             isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-          } bg-[var(--bg-primary)]/95 backdrop-blur-lg border-t border-[var(--border-color)]`}
+          } bg-(--bg-primary)/95 backdrop-blur-lg border-t border-(--border-color)`}
         >
           <div className="px-4 py-3 space-y-1">
             {allPages.map((link) => (
@@ -296,7 +296,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="block py-3 text-base font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--bg-tertiary)] rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1"
+                  className="block py-3 text-base font-medium text-(--text-secondary) hover:text-(--color-primary) hover:bg-(--bg-tertiary) rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -305,7 +305,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block py-3 text-base font-medium text-[var(--text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--bg-tertiary)] rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1 cursor-pointer"
+                  className="block py-3 text-base font-medium text-(--text-secondary) hover:text-(--color-primary) hover:bg-(--bg-tertiary) rounded-lg px-3 transition-all duration-200 transform hover:translate-x-1 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -314,22 +314,22 @@ const Navbar = () => {
             ))}
             
             {/* Mobile Auth Buttons */}
-            <div className="pt-3 border-t border-[var(--border-color)] mt-3">
+            <div className="pt-3 border-t border-(--border-color) mt-3">
               <Link 
                 to="/login" 
-                className="block w-full text-center py-2 text-[var(--text-secondary)] hover:text-[var(--color-primary)] font-medium mb-2 transition-colors duration-200"
+                className="block w-full text-center py-2 text-(--text-secondary) hover:text-(--color-primary) font-medium mb-2 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 লগ ইন
               </Link>
               <Link 
                 to="/signup" 
-                className="block w-full text-center py-2 bg-linear-to-r from-[var(--color-primary)] to-[var(--color-secondary)] hover:from-[var(--color-primary-light)] hover:to-[var(--color-accent)] text-white font-medium rounded-lg shadow-sm transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                className="block w-full text-center py-2 bg-linear-to-r from-(--color-primary) to-(--color-secondary) hover:from-(--color-primary-light) hover:to-(--color-accent) text-white font-medium rounded-lg shadow-sm transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
                 onClick={() => setIsOpen(false)}
               >
                 সাইন আপ
               </Link>
-              <div className="flex justify-center mt-3 pt-3 border-t border-[var(--border-color)]">
+              <div className="flex justify-center mt-3 pt-3 border-t border-(--border-color)">
                 <ThemeToggle />
               </div>
             </div>
