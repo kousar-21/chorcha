@@ -24,7 +24,7 @@ const Hero = () => {
       {/* TOP — 90% Solid Background */}
       <motion.div
         // Apply the 90% height and solid background
-        className={`w-full ${topSectionHeight} ${topSectionBg} text-[var(--text-primary)] px-6 sm:px-12 md:px-20 lg:px-24 xl:px-60 py-12 flex items-center relative transition-colors duration-300`}
+        className={`w-full ${topSectionHeight} ${topSectionBg} text-(--text-primary) px-6 sm:px-12 md:px-20 lg:px-24 xl:px-60 py-12 flex items-center relative transition-colors duration-300`}
         transition={{
           duration: 8,
           repeat: Infinity,
@@ -40,7 +40,7 @@ const Hero = () => {
               চর্চা করো নিজের গতিতে
             </h1>
 
-            <p className="text-sm sm:text-base md:text-base text-[var(--text-tertiary)]">
+            <p className="text-sm sm:text-base md:text-base text-(--text-tertiary)">
               সিলেবাসের যেকোন টপিক থেকে প্রশ্ন খুঁজে প্র্যাকটিস করো, AI দিয়ে{" "}
               <br className="hidden sm:inline" />
               ব্যাখ্যা বুঝে নাও, আর মক টেস্ট দিয়ে নিজের প্রস্তুতি মাপো।
@@ -48,7 +48,7 @@ const Hero = () => {
 
             <div className="flex flex-col items-center md:items-start gap-2 sm:gap-3 pt-4">
               <PlaystoreLogo />
-              <p className="text-xs sm:text-sm md:text-sm text-[var(--text-tertiary)]">
+              <p className="text-xs sm:text-sm md:text-sm text-(--text-tertiary)">
                 100k+ downloads | ⭐ 4.6 Rating with over 8k Reviews
               </p>
             </div>
