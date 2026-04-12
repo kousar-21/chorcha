@@ -32,7 +32,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--bg-primary)] text-[var(--text-primary)] border-t border-[var(--color-primary)]/50 transition-colors duration-300">
+    <footer className="bg-(--bg-primary) text-(--text-primary) border-t border-(--color-primary)/50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -40,10 +40,10 @@ const Footer = () => {
           
           {/* Column 1: Logo & Social (2 columns wide on small screens, 1 on md+) */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1">
-            <h3 className="text-3xl font-extrabold bg-clip-text text-transparent b-linear-to-r from-[var(--color-primary)] to-[var(--color-accent)]">
+            <h3 className="text-3xl font-extrabold bg-clip-text text-transparent b-linear-to-r from-(--color-primary) to-(--color-accent)">
               YourBrand
             </h3>
-            <p className="mt-4 text-[var(--text-tertiary)] text-sm leading-relaxed">
+            <p className="mt-4 text-(--text-tertiary) text-sm leading-relaxed">
               Building the future, one line of code at a time. Empowering your vision with technology.
             </p>
             
