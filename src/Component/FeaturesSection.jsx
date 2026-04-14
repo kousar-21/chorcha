@@ -36,18 +36,18 @@ const FeaturesSection = () => {
 
     return (
         // Changed background to subtle gray for separation
-        <section className="py-20 sm:py-24 bg-[var(--bg-secondary)] transition-colors duration-300"> 
+        <section className="py-20 sm:py-24 bg-(--bg-secondary) transition-colors duration-300"> 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <span className="text-base font-semibold text-[var(--color-primary)] uppercase tracking-widest">
+                    <span className="text-base font-semibold text-(--color-primary) uppercase tracking-widest">
                         Core Competencies
                     </span>
-                    <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-5xl">
+                    <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-(--text-primary) sm:text-5xl">
                         Solutions Engineered for Modern Growth
                     </h2>
-                    <p className="mt-4 max-w-3xl mx-auto text-xl text-[var(--text-tertiary)]">
+                    <p className="mt-4 max-w-3xl mx-auto text-xl text-(--text-tertiary)">
                         We blend creative strategy with cutting-edge engineering to build products that are scalable, delightful, and deliver measurable results.
                     </p>
                 </div>
