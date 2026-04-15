@@ -58,19 +58,19 @@ const FeaturesSection = () => {
                         <div 
                             key={index} 
                             // Individual card styling with dynamic hover effect
-                            className={`group p-8 rounded-xl shadow-lg border border-[var(--border-color)] h-full transition-all duration-300 hover:shadow-2xl ${feature.bgColor} hover:border-transparent`}
+                            className={`group p-8 rounded-xl shadow-lg border border-(--border-color) h-full transition-all duration-300 hover:shadow-2xl ${feature.bgColor} hover:border-transparent`}
                         >
                             <div className="flex items-center justify-start">
                                 {/* Icon Styling: Uses feature.color */}
-                                <div className={`flex items-center justify-center h-14 w-14 rounded-full ${feature.color} bg-[var(--bg-primary)] shadow-xl ring-4 ring-[var(--bg-primary)]`}>
+                                <div className={`flex items-center justify-center h-14 w-14 rounded-full ${feature.color} bg-(--bg-primary) shadow-xl ring-4 ring-(--bg-primary)`}>
                                     <feature.icon className="h-7 w-7" />
                                 </div>
                             </div>
                             
-                            <h3 className="mt-6 text-2xl font-bold tracking-tight text-[var(--text-primary)]">
+                            <h3 className="mt-6 text-2xl font-bold tracking-tight text-(--text-primary)">
                                 {feature.title}
                             </h3>
-                            <p className="mt-3 text-base text-[var(--text-secondary)]">
+                            <p className="mt-3 text-base text-(--text-secondary)">
                                 {feature.description}
                             </p>
                             
@@ -87,10 +87,10 @@ const FeaturesSection = () => {
 
                 {/* Stronger, More Direct CTA */}
                 <div className="mt-16 text-center">
-                    <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-6">Ready to see our work in action?</h3>
+                    <h3 className="text-2xl font-semibold text-(--text-primary) mb-6">Ready to see our work in action?</h3>
                     <a 
                         href="/portfolio" 
-                        className="inline-flex items-center justify-center px-10 py-4 border-2 border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary-light)] transition duration-300 transform hover:scale-105"
+                        className="inline-flex items-center justify-center px-10 py-4 border-2 border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-(--color-primary) hover:bg-(--color-primary-light) transition duration-300 transform hover:scale-105"
                     >
                         <FaBookOpen className="mr-3 h-5 w-5" />
                         View Our Portfolio
