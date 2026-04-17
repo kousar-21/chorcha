@@ -53,10 +53,10 @@ const Hero = () => {
                 <PlaystoreLogo />
               </div>
               
-              <div className="flex items-center gap-4 text-sm font-semibold tracking-wide text-[var(--text-tertiary)]">
+              <div className="flex items-center gap-4 text-sm font-semibold tracking-wide text-(--text-tertiary)">
                 <div className="flex -space-x-2">
                    {[1,2,3,4].map(i => (
-                     <div key={i} className="w-8 h-8 rounded-full border-2 border-[var(--bg-primary)] bg-slate-800 flex items-center justify-center text-[10px]">👤</div>
+                     <div key={i} className="w-8 h-8 rounded-full border-2 border-(--bg-primary) bg-slate-800 flex items-center justify-center text-[10px]">👤</div>
                    ))}
                 </div>
                 <p>100k+ learners joined already</p>
@@ -73,7 +73,7 @@ const Hero = () => {
           >
             <div className={styles.imageWrapper}>
               {/* Subtle back-light for the phone */}
-              <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-[2.6rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+              <div className="absolute -inset-1 bg-linear-to-tr from-blue-600 to-cyan-400 rounded-[2.6rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
               <img
                 src={phoneLogo}
                 alt="Chorcha App UI"
