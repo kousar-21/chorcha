@@ -35,17 +35,17 @@ const LearningPath = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] pt-32 pb-24 px-4 overflow-hidden">
+    <div className="min-h-screen bg-(--bg-primary) pt-32 pb-24 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         
         {/* Page Header */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-10">
           <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-black text-[var(--text-primary)] mb-6">
+            <h1 className="text-4xl md:text-6xl font-black text-(--text-primary) mb-6">
               আপনার সফলতার <br />
               <span className="text-blue-500 underline decoration-blue-500/20 underline-offset-8">রোডম্যাপ</span>
             </h1>
-            <p className="text-[var(--text-tertiary)] text-lg leading-relaxed">
+            <p className="text-(--text-tertiary) text-lg leading-relaxed">
               আপনার লক্ষ্য স্থির করুন এবং আমাদের ধাপে ধাপে সাজানো লার্নিং পাথ অনুসরণ করে পৌঁছে যান আপনার স্বপ্নের ক্যারিয়ারে।
             </p>
           </div>
@@ -80,10 +80,10 @@ const LearningPath = () => {
                   <div className={`p-8 rounded-[2.5rem] border transition-all duration-500 ${
                     step.status === 'active' 
                     ? 'bg-blue-600 border-blue-400 shadow-[0_20px_50px_-15px_rgba(37,99,235,0.4)] text-white' 
-                    : 'bg-white/5 border-white/5 text-[var(--text-tertiary)]'
+                    : 'bg-white/5 border-white/5 text-(--text-tertiary)'
                   }`}>
                     <div className="text-4xl mb-6">{step.icon}</div>
-                    <h3 className={`text-2xl font-bold mb-3 ${step.status === 'active' ? 'text-white' : 'text-[var(--text-primary)]'}`}>
+                    <h3 className={`text-2xl font-bold mb-3 ${step.status === 'active' ? 'text-white' : 'text-(--text-primary)'}`}>
                       {step.title}
                     </h3>
                     <p className="leading-relaxed opacity-80">{step.desc}</p>
@@ -114,7 +114,7 @@ const LearningPath = () => {
         </div>
 
         {/* Footer CTA */}
-        <div className="mt-32 p-12 rounded-[3rem] bg-gradient-to-br from-slate-900 to-black border border-white/5 text-center relative overflow-hidden">
+        <div className="mt-32 p-12 rounded-[3rem] bg-linear-to-br from-slate-900 to-black border border-white/5 text-center relative overflow-hidden">
             <div className="relative z-10">
                 <h2 className="text-3xl font-bold text-white mb-4">আপনার নিজস্ব পথ তৈরি করুন</h2>
                 <p className="text-slate-400 mb-8 max-w-md mx-auto">আমাদের AI মেন্টর আপনার প্রোফাইল বিশ্লেষণ করে আপনার জন্য সেরা রোডম্যাপ তৈরি করে দেবে।</p>
