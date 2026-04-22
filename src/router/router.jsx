@@ -14,13 +14,14 @@ import ChorchaStart from "../Pages/ChorchaStart";
 import GameOpportunity from "../Pages/GameOpportunity";
 import SignIn from "../Pages/SignIn";
 // Import the new SignUp component
-import SignUp from "../Pages/SignUp"; 
+import SignUp from "../Pages/SignUp";
 import FAQ from "../Pages/FAQ";
 import Careers from "../Pages/Careers";
 import OurTeam from "../Pages/OurTeam";
 import HelpPage from "../Pages/Help";
 import TermsAndService from "../Pages/TermAndService";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
+import LearningPath from "../Pages/LearningPath";
 
 export const router = createBrowserRouter([
   {
@@ -87,6 +88,9 @@ export const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ></FAQ>
+      }, {
+        path: "/learningPath",
+        element: <LearningPath></LearningPath>
       },
       {
         path: "/careers",
