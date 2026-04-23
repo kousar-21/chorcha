@@ -22,6 +22,8 @@ import HelpPage from "../Pages/Help";
 import TermsAndService from "../Pages/TermAndService";
 import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import LearningPath from "../Pages/LearningPath";
+import FeaturesSection from "../Component/FeaturesSection";
+import Features from "../Pages/Features";
 
 export const router = createBrowserRouter([
   {
@@ -88,9 +90,14 @@ export const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ></FAQ>
-      }, {
+      },
+      {
         path: "/learningPath",
         element: <LearningPath></LearningPath>
+      },
+      {
+        path: "/features",
+        element: <Features></Features>
       },
       {
         path: "/careers",
