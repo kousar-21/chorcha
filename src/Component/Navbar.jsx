@@ -23,7 +23,7 @@ const Navbar = () => {
       name: "প্রধান",
       items: [
         { name: "হোম", href: "/" },
-        { name: "ফিচারসমূহ", href: "#features" },
+        { name: "ফিচারসমূহ", href: "/features" },
       ]
     },
     {
@@ -62,7 +62,7 @@ const Navbar = () => {
   // All pages for comprehensive navigation
   const allPages = [
     { name: "হোম", href: "/" },
-    { name: "ফিচারসমূহ", href: "#features" },
+    { name: "ফিচারসমূহ", href: "/features" },
     { name: "আমাদের সম্পর্কে", href: "/about" },
     { name: "চর্চার শুরু", href: "/chorchastart" },
     { name: "সেবাসমূহ", href: "/services" },
