@@ -63,6 +63,7 @@ const Navbar = () => {
   const allPages = [
     { name: "হোম", href: "/" },
     { name: "ফিচারসমূহ", href: "/features" },
+    { name: "আরও জানুন", href: "/learningPath" },
     { name: "আমাদের সম্পর্কে", href: "/about" },
     { name: "চর্চার শুরু", href: "/chorchastart" },
     { name: "সেবাসমূহ", href: "/services" },
