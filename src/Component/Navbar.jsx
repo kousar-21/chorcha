@@ -24,6 +24,8 @@ const Navbar = () => {
       items: [
         { name: "হোম", href: "/" },
         { name: "ফিচারসমূহ", href: "/features" },
+        { name: "আরও জানুন", href: "/learningPath" },
+
       ]
     },
     {
@@ -58,7 +60,7 @@ const Navbar = () => {
       ]
     }
   ];
-  
+
   // All pages for comprehensive navigation
   const allPages = [
     { name: "হোম", href: "/" },
@@ -83,12 +85,12 @@ const Navbar = () => {
       <nav className="hidden md:flex bg-(--bg-primary) text-(--text-primary) text-sm sticky top-0 z-50 shadow-md border-b border-(--border-color) transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            
+
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 mr-6">
-              <img 
-                src={logo} 
-                alt="Chorcha Logo" 
+              <img
+                src={logo}
+                alt="Chorcha Logo"
                 className="w-10 h-10 rounded-lg object-cover"
               />
               {/* <span className="text-xl font-bold text-gray-900 hidden sm:block">চর্চা</span> */}
@@ -97,13 +99,13 @@ const Navbar = () => {
             {/* Desktop Menu with Dropdowns */}
             <div className="hidden lg:flex items-center gap-8">
               {navigationCategories.map((category, index) => (
-                <div 
+                <div
                   key={category.name}
                   className="relative group"
                   onMouseEnter={() => setDropdownOpen(index)}
                   onMouseLeave={() => setDropdownOpen(null)}
                 >
-                  <button 
+                  <button
                     className="flex items-center space-x-1 hover:text-(--color-primary) transition-colors font-medium"
                     onClick={() => toggleDropdown(index)}
                   >
@@ -112,11 +114,10 @@ const Navbar = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  
-                  <div 
-                    className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
-                      dropdownOpen === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'
-                    }`}
+
+                  <div
+                    className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${dropdownOpen === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'
+                      }`}
                   >
                     <div className="py-2">
                       {category.items.map((item) => (
@@ -169,14 +170,14 @@ const Navbar = () => {
 
             {/* Desktop Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <Link 
-                to="/signin" 
+              <Link
+                to="/signin"
                 className="text-(--text-secondary) hover:text-(--color-primary) font-medium transition-colors px-3 py-2"
               >
                 লগ ইন
               </Link>
-              <Link 
-                to="/signup" 
+              <Link
+                to="/signup"
                 className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) hover:from-(--color-primary-light) hover:to-(--color-accent) text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm"
               >
                 সাইন আপ
@@ -263,19 +264,19 @@ const Navbar = () => {
         `}</style>
         <div className="px-4 py-3">
           <div className="flex justify-between items-center">
-            
+
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <img 
-                src={logo} 
-                alt="Chorcha Logo" 
+              <img
+                src={logo}
+                alt="Chorcha Logo"
                 className="w-8 h-8 rounded-lg object-cover shadow-sm"
               />
               <span className="text-lg font-bold text-(--text-primary)">চর্চা</span>
             </Link>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="p-2 rounded-lg text-(--text-secondary) hover:text-(--color-primary) hover:bg-(--bg-tertiary) transition-all duration-200 transform hover:scale-105 active:scale-95"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
@@ -286,10 +287,9 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu - Enhanced Design */}
-        <div 
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-          } bg-(--bg-primary)/95 backdrop-blur-lg border-t border-(--border-color)`}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+            } bg-(--bg-primary)/95 backdrop-blur-lg border-t border-(--border-color)`}
         >
           <div className="px-4 py-3 space-y-1">
             {allPages.map((link) => (
@@ -313,18 +313,18 @@ const Navbar = () => {
                 </a>
               )
             ))}
-            
+
             {/* Mobile Auth Buttons */}
             <div className="pt-3 border-t border-(--border-color) mt-3">
-              <Link 
-                to="/login" 
+              <Link
+                to="/login"
                 className="block w-full text-center py-2 text-(--text-secondary) hover:text-(--color-primary) font-medium mb-2 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 লগ ইন
               </Link>
-              <Link 
-                to="/signup" 
+              <Link
+                to="/signup"
                 className="block w-full text-center py-2 bg-linear-to-r from-(--color-primary) to-(--color-secondary) hover:from-(--color-primary-light) hover:to-(--color-accent) text-white font-medium rounded-lg shadow-sm transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
                 onClick={() => setIsOpen(false)}
               >
