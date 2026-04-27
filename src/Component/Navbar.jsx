@@ -97,7 +97,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Menu with Dropdowns */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex bg-gray-500 text-white items-center gap-8">
               {navigationCategories.map((category, index) => (
                 <div
                   key={category.name}
