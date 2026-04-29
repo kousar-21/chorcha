@@ -116,7 +116,7 @@ const Navbar = () => {
                   </button>
 
                   <div
-                    className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${dropdownOpen === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'
+                    className={`absolute top-full left-0 mt-2 w-48 dark:bg-slate-700 z-50 dark:text-amber-100 text-slate-700 rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${dropdownOpen === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'
                       }`}
                   >
                     <div className="py-2">
