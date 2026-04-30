@@ -57,8 +57,8 @@ const QuestionSolver = () => {
   if (!currentQuestion) return <div className="p-10 text-center">Loading questions...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full p-8 bg-white rounded-2xl shadow-xl border border-gray-100">
+    <div className="min-h-screen bg-primary flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full p-8 bg-secondary rounded-2xl shadow-xl border border-gray-100">
         
         {/* Progress Header */}
         <div className="flex justify-between items-center mb-6">
@@ -68,7 +68,7 @@ const QuestionSolver = () => {
         </div>
 
         {/* Question Text */}
-        <h2 className="text-2xl font-bold text-gray-800 mb-8 leading-tight">
+        <h2 className="text-2xl font-bold text-gray-500 mb-8 leading-tight">
           {currentQuestion.question}
         </h2>
 
@@ -102,7 +102,7 @@ const QuestionSolver = () => {
                 className={buttonClass}
               >
                 <span className={`w-8 h-8 flex items-center justify-center rounded-full mr-4 text-sm font-bold ${
-                  isSelected ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'
+                  isSelected ? 'bg-blue-600 text-white' : 'bg-slate-400 text-gray-800'
                 }`}>
                   {String.fromCharCode(65 + index)}
                 </span>
