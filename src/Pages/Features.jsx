@@ -1,5 +1,6 @@
 import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import featureAnimation from '../assets/our-team.json';
 
 const Features = () => {
   const featureList = [
@@ -62,7 +63,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-white py-24">
+    <div className="relative bg-(--bg-primary) py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -82,9 +83,9 @@ const Features = () => {
           {/* Main Large Feature Card (Occupies 2 columns on large screens) */}
           <div className="lg:col-span-2 bg-Linear-to-br from-blue-600 to-indigo-800 rounded-[3rem] p-10 md:p-14 text-white relative overflow-hidden group shadow-2xl shadow-blue-200">
             <div className="relative z-10">
-              <span className="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 inline-block">Premium Feature</span>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">{featureList[0].title}</h3>
-              <p className="text-blue-100 text-lg max-w-md leading-relaxed mb-8">
+              <span className="bg-slate-600/40 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 inline-block">Premium Feature</span>
+              <h3 className="text-2xl text-slate-500 font-bold mb-4">{featureList[0].title}</h3>
+              <p className="text-blue-500 text-md max-w-md leading-relaxed mb-8">
                 {featureList[0].description}
               </p>
               <button className="bg-white text-blue-700 font-bold py-3 px-8 rounded-xl hover:scale-105 transition-transform">
@@ -93,11 +94,11 @@ const Features = () => {
             </div>
             
             {/* Lottie Animation for the Large Card */}
-            <div className="absolute top-1/2 -right-10 -translate-y-1/2 w-80 h-80 opacity-20 lg:opacity-100 pointer-events-none group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute top-1/2 right-10 -translate-y-1/2 w-60 h-60 opacity-20 lg:opacity-100 pointer-events-none group-hover:scale-110 transition-transform duration-500">
               <Player
                 autoplay
                 loop
-                src="https://lottie.host/6f9064f7-920b-402c-9686-302340325492/68v4A6kP6L.json"
+                src={featureAnimation}
                 style={{ height: '100%', width: '100%' }}
               />
             </div>
@@ -107,12 +108,12 @@ const Features = () => {
           {featureList.slice(1).map((feature) => (
             <div 
               key={feature.id} 
-              className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-300 group"
+              className="relative bg-(--bg-primary) p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-300 group"
             >
               <div className={`${feature.bgColor} ${feature.iconColor} w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform duration-300`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-slate-500 mb-4">{feature.title}</h3>
               <p className="text-slate-500 leading-relaxed text-sm">
                 {feature.description}
               </p>
@@ -121,12 +122,12 @@ const Features = () => {
         </div>
 
         {/* Bottom Stats/Trust Section (Optional 7th Section Highlight) */}
-        <div className="mt-20 p-1 bg-slate-50 rounded-[3rem] border border-slate-100">
-            <div className="bg-white rounded-[2.8rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="mt-20 p-1 relative bg-(--bg-primary) rounded-[3rem] border border-slate-100">
+            <div className="relative bg-(--bg-primary) rounded-[2.8rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="flex items-center space-x-6">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-2xl">🚀</div>
                     <div>
-                        <h4 className="text-2xl font-black text-slate-900">১০০% সাকসেস রেট</h4>
+                        <h4 className="text-2xl font-black text-slate-500">১০০% সাকসেস রেট</h4>
                         <p className="text-slate-500">আমাদের কোর্স সম্পন্ন করার পর ক্যারিয়ার গড়ার হার।</p>
                     </div>
                 </div>
@@ -134,7 +135,7 @@ const Features = () => {
                 <div className="flex items-center space-x-6">
                     <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-2xl">💎</div>
                     <div>
-                        <h4 className="text-2xl font-black text-slate-900">লাইফ-টাইম এক্সেস</h4>
+                        <h4 className="text-2xl font-black text-slate-500">লাইফ-টাইম এক্সেস</h4>
                         <p className="text-slate-500">একবার কিনলে আজীবন শেখার সুবিধা।</p>
                     </div>
                 </div>
