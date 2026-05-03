@@ -29,14 +29,14 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-(--bg-primary) overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-3">Expertise</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+            <h3 className="text-4xl md:text-5xl font-bold text-slate-500 leading-tight">
               Specialized solutions for <br /> unique business needs.
             </h3>
           </div>
@@ -50,7 +50,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300"
+              className="group p-8 rounded-3xl border border-gray-100 bg-(--bg-secondary) hover:bg-white hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300"
             >
               <div className={`w-14 h-14 ${service.color} rounded-2xl flex items-center justify-center text-2xl mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 {service.icon}
@@ -70,7 +70,7 @@ const Services = () => {
         </div>
 
         {/* Bottom Feature/Stat */}
-        <div className="mt-16 p-8 md:p-12 bg-slate-900 rounded-[2.5rem] text-white flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="mt-16 p-8 md:p-12 bg-slate-700 rounded-[2.5rem] text-white flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h4 className="text-2xl font-bold mb-2">Not sure which service you need?</h4>
             <p className="text-slate-400">Schedule a free 30-minute discovery call with our experts.</p>
