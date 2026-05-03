@@ -127,6 +127,7 @@ const LearningPath = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px]"></div>
         </div>
 
+
       </div>
     </div>
   );
