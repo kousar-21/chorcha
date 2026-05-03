@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Player } from '@lottiefiles/react-lottie-player';
+import roadmapAnimation from '../assets/our-team.json'
 
 const LearningPath = () => {
   const steps = [
@@ -53,7 +54,7 @@ const LearningPath = () => {
             <Player
               autoplay
               loop
-              src="https://lottie.host/57f1f0e4-5464-448f-891a-7b3b784a0c8b/pM8H89h59R.json"
+              src={roadmapAnimation}
               style={{ height: '100%', width: '100%' }}
             />
           </div>
