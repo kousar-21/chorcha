@@ -2,11 +2,11 @@ import React from 'react';
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-primary py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-500 mb-4">
             মূল্য নির্ধারণ
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -17,10 +17,10 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Basic Plan */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-secondary rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">বেসিক</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-1">৳২৯৯<span className="text-lg font-normal text-gray-500">/মাস</span></div>
+              <h3 className="text-2xl font-bold text-gray-600 mb-2">বেসিক</h3>
+              <div className="text-4xl font-bold text-gray-600 mb-1">৳২৯৯<span className="text-lg font-normal text-gray-500">/মাস</span></div>
               <p className="text-gray-600 mt-2">ছাত্রদের জন্য উপযোগী</p>
             </div>
             <ul className="space-y-4 mb-8">
@@ -61,13 +61,13 @@ const Pricing = () => {
           </div>
 
           {/* Pro Plan (Featured) */}
-          <div className="relative bg-white rounded-2xl shadow-xl p-8 border-2 border-green-500 transform md:-translate-y-4 transition-transform duration-300 hover:scale-105 z-10">
+          <div className="relative bg-secondary rounded-2xl shadow-xl p-8 border-2 border-green-500 transform md:-translate-y-4 transition-transform duration-300 hover:scale-105 z-10">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">সবচেয়ে জনপ্রিয়</span>
             </div>
             <div className="text-center mb-8 pt-4">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">প্রো</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-1">৳৫৯৯<span className="text-lg font-normal text-gray-500">/মাস</span></div>
+              <h3 className="text-2xl font-bold text-gray-600 mb-2">প্রো</h3>
+              <div className="text-4xl font-bold text-gray-600 mb-1">৳৫৯৯<span className="text-lg font-normal text-gray-500">/মাস</span></div>
               <p className="text-gray-600 mt-2">ব্যস্ত ছাত্রদের জন্য</p>
             </div>
             <ul className="space-y-4 mb-8">
@@ -108,10 +108,10 @@ const Pricing = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-secondary rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">প্রিমিয়াম</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-1">৳৯৯৯<span className="text-lg font-normal text-gray-500">/মাস</span></div>
+              <h3 className="text-2xl font-bold text-gray-600 mb-2">প্রিমিয়াম</h3>
+              <div className="text-4xl font-bold text-gray-600 mb-1">৳৯৯৯<span className="text-lg font-normal text-gray-500">/মাস</span></div>
               <p className="text-gray-600 mt-2">পেশাদারদের জন্য</p>
             </div>
             <ul className="space-y-4 mb-8">
@@ -156,16 +156,16 @@ const Pricing = () => {
         <div className="mt-20 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">সাধারণ প্রশ্নাবলী</h2>
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">প্ল্যানগুলো কি পরিবর্তন করা যাবে?</h3>
+            <div className="bg-secondary rounded-lg p-6 shadow-md border border-gray-100">
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">প্ল্যানগুলো কি পরিবর্তন করা যাবে?</h3>
               <p className="text-gray-600">হ্যাঁ, আপনি যেকোনো সময় আপনার প্ল্যান পরিবর্তন করতে পারেন। পরিবর্তন করার পর অব্যাহতি সময়ের জন্য অতিরিক্ত চার্জ প্রযোজ্য হবে না।</p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">বিনামূল্যে ট্রায়াল কি উপলব্ধ?</h3>
+            <div className="bg-secondary rounded-lg p-6 shadow-md border border-gray-100">
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">বিনামূল্যে ট্রায়াল কি উপলব্ধ?</h3>
               <p className="text-gray-600">হ্যাঁ, আমরা ৭ দিনের বিনামূল্যে ট্রায়াল সরবরাহ করি। ট্রায়াল শেষে স্বয়ংক্রিয়ভাবে কোনো প্ল্যানে চার্জ করা হবে না।</p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">মূল্য নির্ধারণ মাসিক নাকি বার্ষিক?</h3>
+            <div className="bg-secondary rounded-lg p-6 shadow-md border border-gray-100">
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">মূল্য নির্ধারণ মাসিক নাকি বার্ষিক?</h3>
               <p className="text-gray-600">আমাদের সকল প্ল্যান মাসিক ভিত্তিতে চালু হয়। বার্ষিক প্ল্যানের জন্য ২ মাস ফ্রি সুবিধা পাবেন।</p>
             </div>
           </div>
