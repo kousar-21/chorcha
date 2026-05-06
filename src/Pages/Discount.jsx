@@ -126,14 +126,14 @@ const Discount = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-primary py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1 bg-linear-to-r from-green-500 to-blue-600 text-white rounded-full mb-4">
             <span className="font-bold">সীমিত সময়ের অফার!</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-600 mb-4">
             ছাড়ের মূল্য নির্ধারণ
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
