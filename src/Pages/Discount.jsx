@@ -174,7 +174,7 @@ const Discount = () => {
           {plans[selectedPlan].map((plan, index) => (
             <div 
               key={index} 
-              className={`relative bg-white rounded-2xl shadow-lg p-8 border-2 transition-all duration-300 hover:shadow-xl hover:scale-105 ${
+              className={`relative bg-secondary rounded-2xl shadow-lg p-8 border-2 transition-all duration-300 hover:shadow-xl hover:scale-105 ${
                 plan.popular 
                   ? 'border-green-500 transform md:-translate-y-4 z-10' 
                   : 'border-gray-200'
@@ -197,9 +197,9 @@ const Discount = () => {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-slate-700 mb-2">{plan.name}</h3>
                 <div className="relative mb-4">
-                  <div className="text-3xl font-bold text-gray-900 line-through opacity-60">
+                  <div className="text-3xl font-bold text-gray-500 line-through opacity-60">
                     {plan.originalPrice}
                   </div>
                   <div className="text-5xl font-bold text-green-600">
