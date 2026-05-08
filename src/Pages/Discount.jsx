@@ -241,15 +241,15 @@ const Discount = () => {
         </div>
 
         {/* Promo Code Section */}
-        <div className="bg-linear-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">প্রোমো কোড প্রয়োগ করুন</h2>
+        <div className="bg-primary border border-green-300 rounded-2xl p-8 mb-16">
+          <h2 className="text-2xl font-bold text-gray-600 mb-4 text-center">প্রোমো কোড প্রয়োগ করুন</h2>
           <div className="max-w-md mx-auto flex">
             <input
               type="text"
               value={promoCode}
               onChange={(e) => setPromoCode(e.target.value)}
               placeholder="প্রোমো কোড লিখুন"
-              className="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-slate-600 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <button
               onClick={applyPromoCode}
@@ -267,13 +267,13 @@ const Discount = () => {
         </div>
 
         {/* Available Promo Codes */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">বিশেষ প্রোমো কোডসমূহ</h2>
+        <div className="bg-primary border border-green-300 rounded-2xl shadow-lg p-8 mb-16">
+          <h2 className="text-2xl font-bold text-gray-500 mb-6 text-center">বিশেষ প্রোমো কোডসমূহ</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {promoCodes.map((promo, index) => (
-              <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <div key={index} className="bg-secondary p-4 rounded-lg border border-gray-300 text-slate-600">
                 <div className="text-lg font-bold text-green-600 mb-1">{promo.code}</div>
-                <div className="text-xl font-bold text-gray-900 mb-2">{promo.discount} ছাড়</div>
+                <div className="text-xl font-bold text-gray-600 mb-2">{promo.discount} ছাড়</div>
                 <div className="text-gray-600 text-sm">{promo.description}</div>
               </div>
             ))}
@@ -281,23 +281,23 @@ const Discount = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">সাধারণ প্রশ্নাবলী</h2>
+        <div className="bg-primary border border-green-300 rounded-2xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-600 mb-8 text-center">সাধারণ প্রশ্নাবলী</h2>
           <div className="space-y-6 max-w-4xl mx-auto">
             <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">ছাড়ের মেয়াদ কতদিন?</h3>
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">ছাড়ের মেয়াদ কতদিন?</h3>
               <p className="text-gray-600">ছাড়ের মেয়াদ ৩১ জানুয়ারি, ২০২৬ পর্যন্ত। এরপর স্বাভাবিক মূল্য প্রযোজ্য হবে।</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">প্রোমো কোড কীভাবে পাবো?</h3>
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">প্রোমো কোড কীভাবে পাবো?</h3>
               <p className="text-gray-600">আমাদের সোশ্যাল মিডিয়া পেজগুলোতে ফলো করলে বিশেষ প্রোমো কোড পাবেন।</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">বার্ষিক পরিকল্পনায় কী সুবিধা?</h3>
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">বার্ষিক পরিকল্পনায় কী সুবিধা?</h3>
               <p className="text-gray-600">বার্ষিক পরিকল্পনায় ২ মাস ফ্রি পাবেন এবং ৪০%+ ছাড় পাবেন।</p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">প্ল্যান পরিবর্তন করা যাবে কি?</h3>
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">প্ল্যান পরিবর্তন করা যাবে কি?</h3>
               <p className="text-gray-600">হ্যাঁ, যেকোনো সময় আপনার প্ল্যান পরিবর্তন করতে পারেন।</p>
             </div>
           </div>
