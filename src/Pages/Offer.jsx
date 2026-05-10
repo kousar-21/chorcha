@@ -98,7 +98,7 @@ const Offer = () => {
           <div className="inline-block px-4 py-1 bg-linear-to-r from-green-500 to-blue-600 text-white rounded-full mb-4">
             <span className="font-bold">সীমিত সময়ের অফার!</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
             বিশেষ অফারসমূহ
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -108,12 +108,12 @@ const Offer = () => {
 
         {/* Current Offers Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">বর্তমান অফারসমূহ</h2>
+          <h2 className="text-3xl font-bold text-gray-600 mb-8 text-center">বর্তমান অফারসমূহ</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentOffers.map((offer) => (
               <div 
                 key={offer.id} 
-                className="bg-white rounded-2xl shadow-lg p-6 border-2 border-transparent hover:border-green-500 transition-all duration-300 hover:shadow-xl cursor-pointer transform hover:-translate-y-1"
+                className="bg-secondary rounded-2xl shadow-lg p-6 border-2 border-gray-400 hover:border-green-500 transition-all duration-300 hover:shadow-xl cursor-pointer transform hover:-translate-y-1"
                 onClick={() => handleOfferClick(offer)}
               >
                 <div className="relative mb-4">
@@ -162,8 +162,8 @@ const Offer = () => {
         </div>
 
         {/* Expired Offers Section */}
-        <div className="bg-gray-50 rounded-2xl p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">সমাপ্ত অফারসমূহ</h2>
+        <div className="bg-primary border border-gray-400 rounded-2xl p-8 mb-16">
+          <h2 className="text-2xl font-bold text-gray-600 mb-6 text-center">সমাপ্ত অফারসমূহ</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {expiredOffers.map((offer) => (
               <div key={offer.id} className="bg-white rounded-xl p-4 border border-gray-200 opacity-75">
