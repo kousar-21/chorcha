@@ -22,7 +22,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-primary py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -33,7 +33,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-600 mb-4">
             {companyInfo.name}
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -42,8 +42,8 @@ const AboutPage = () => {
         </div>
 
         {/* Company Description */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
+        <div className="bg-secondary border border-green-300 rounded-2xl shadow-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-600 mb-6 pb-4 border-b border-gray-200">
             আমাদের সম্পর্কে
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -51,8 +51,8 @@ const AboutPage = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-linear-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+            <div className="bg-secondary p-6 rounded-xl border border-blue-200">
+              <h3 className="text-xl font-semibold text-gray-700 mb-3 flex items-center">
                 <span className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">১</span>
                 মিশন
               </h3>
@@ -61,8 +61,8 @@ const AboutPage = () => {
               </p>
             </div>
             
-            <div className="bg-linear-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+            <div className="bg-secondary p-6 rounded-xl border border-green-200">
+              <h3 className="text-xl font-semibold text-gray-700 mb-3 flex items-center">
                 <span className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mr-3">২</span>
                 ভিশন
               </h3>
