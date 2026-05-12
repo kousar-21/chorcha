@@ -92,50 +92,50 @@ const AboutPage = () => {
         </div>
 
         {/* Achievements */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center pb-4 border-b border-gray-200">
+        <div className="bg-secondary border border-green-300 rounded-2xl shadow-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-600 mb-8 text-center pb-4 border-b border-gray-200">
             আমাদের অর্জন
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {companyInfo.achievements.map((achievement, index) => (
-              <div key={index} className="text-center p-6 bg-linear-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-300">
+              <div key={index} className="text-center p-6 bg-secondary border border-blue-200 rounded-xl hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {index + 1}
                 </div>
-                <p className="text-gray-800 font-medium">{achievement}</p>
+                <p className="text-gray-500 font-medium">{achievement}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Contact Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center pb-4 border-b border-gray-200">
+        <div className="bg-secondary border border-green-300 rounded-2xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-600 mb-8 text-center pb-4 border-b border-gray-200">
             যোগাযোগ করুন
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 bg-blue-50 rounded-xl">
+            <div className="p-6 bg-secondary border border-blue-200 rounded-xl">
               <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
                 📧
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">ইমেইল</h3>
-              <p className="text-gray-700">{companyInfo.contact.email}</p>
+              <h3 className="font-semibold text-gray-600 mb-2">ইমেইল</h3>
+              <p className="text-gray-500">{companyInfo.contact.email}</p>
             </div>
             
-            <div className="p-6 bg-green-50 rounded-xl">
+            <div className="p-6 bg-secondary border border-blue-200 rounded-xl">
               <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
                 📞
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">ফোন</h3>
-              <p className="text-gray-700">{companyInfo.contact.phone}</p>
+              <h3 className="font-semibold text-gray-600 mb-2">ফোন</h3>
+              <p className="text-gray-500">{companyInfo.contact.phone}</p>
             </div>
             
-            <div className="p-6 bg-purple-50 rounded-xl">
+            <div className="p-6 bg-secondary border border-blue-200 rounded-xl">
               <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
                 📍
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">ঠিকানা</h3>
-              <p className="text-gray-700">{companyInfo.contact.address}</p>
+              <h3 className="font-semibold text-gray-600 mb-2">ঠিকানা</h3>
+              <p className="text-gray-500">{companyInfo.contact.address}</p>
             </div>
           </div>
         </div>
