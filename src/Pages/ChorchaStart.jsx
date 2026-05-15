@@ -58,7 +58,7 @@ const ChorchaStart = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-primary transition-colors duration-300 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
