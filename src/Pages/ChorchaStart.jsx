@@ -63,7 +63,7 @@ const ChorchaStart = () => {
         
         {/* Header Section */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-black text-slate-700 dark:text-white mb-6">
             চর্চা <span className="text-blue-600">শুরু</span>
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -74,7 +74,7 @@ const ChorchaStart = () => {
         {/* Milestones - Clean Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
           {milestones.map((ms, index) => (
-            <div key={index} className="bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 p-8 rounded-3xl text-center hover:scale-105 transition-transform duration-300">
+            <div key={index} className="bg-secondary border border-green-200 dark:border-slate-800 p-8 rounded-3xl text-center hover:scale-105 transition-transform duration-300">
               <div className="text-2xl mb-2">{ms.icon}</div>
               <div className="text-3xl font-black text-blue-600 dark:text-blue-400 mb-1">{ms.number}</div>
               <div className="text-slate-500 dark:text-slate-400 font-medium text-sm">{ms.label}</div>
@@ -84,7 +84,7 @@ const ChorchaStart = () => {
 
         {/* Founders Section - Professional Grids */}
         <div className="mb-32">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">প্রতিষ্ঠাতা দল</h2>
+          <h2 className="text-3xl font-bold text-slate-600 dark:text-white mb-12 text-center">প্রতিষ্ঠাতা দল</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {founders.map((founder, index) => (
               <div key={index} className="group text-center">
@@ -96,7 +96,7 @@ const ChorchaStart = () => {
                     className="relative w-full h-full rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-xl"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{founder.name}</h3>
+                <h3 className="text-xl font-bold text-slate-700 dark:text-white mb-1">{founder.name}</h3>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold mb-4 text-sm uppercase tracking-wider">{founder.role}</p>
                 <p className="text-slate-500 dark:text-slate-400 italic leading-relaxed px-4">"{founder.quote}"</p>
               </div>
@@ -106,7 +106,7 @@ const ChorchaStart = () => {
 
         {/* Timeline - Professional Alignment */}
         <div className="mb-32 relative">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-16 text-center">আমাদের যাত্রা</h2>
+          <h2 className="text-3xl font-bold text-slate-600 dark:text-white mb-16 text-center">আমাদের যাত্রা</h2>
           
           {/* Vertical line (Hidden on mobile, centered on desktop) */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-slate-200 dark:bg-slate-800 top-10"></div>
@@ -171,8 +171,8 @@ const ChorchaStart = () => {
         </div>
 
         {/* Values Section - Minimalist */}
-        <div className="border-t border-slate-100 dark:border-slate-800 pt-20">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">আমাদের মূল্যবোধ</h2>
+        <div className="border-t border-slate-200 pt-20">
+          <h2 className="text-3xl font-bold text-slate-600 dark:text-white mb-12 text-center">আমাদের মূল্যবোধ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {[
               { title: "গুণগত মান", description: "উচ্চ মানের শিক্ষা সমাধান প্রদান" },
@@ -182,7 +182,7 @@ const ChorchaStart = () => {
             ].map((value, index) => (
               <div key={index} className="group">
                 <div className="w-12 h-1 bg-blue-600 mb-4 transition-all group-hover:w-full"></div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{value.title}</h3>
+                <h3 className="text-lg font-bold text-slate-700 dark:text-white mb-2">{value.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
